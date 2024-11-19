@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 const SignIn = () => {
   return (
     <div>
-      <div className="p-8 left-[594px] absolute bg-white rounded-2xl shadow flex-col justify-start items-center gap-12 inline-flex">
+      <div className="p-8 top-[100px] left-[594px] absolute bg-white rounded-2xl shadow flex-col justify-start items-center gap-12 inline-flex">
         <div className="self-stretch h-[71px] flex-col justify-start items-center gap-4 flex">
           <div className="self-stretch text-center text-black text-[32px] font-normal  leading-loose">
             Login

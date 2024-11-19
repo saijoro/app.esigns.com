@@ -23,6 +23,7 @@
     "@tanstack/start": "^1.82.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "js-cookie": "^3.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.4",
@@ -31,6 +32,7 @@
     "vite-tsconfig-paths": "^5.1.2"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.3",

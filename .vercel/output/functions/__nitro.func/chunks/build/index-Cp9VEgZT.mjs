@@ -1,5 +1,5 @@
 import { jsxs } from 'react/jsx-runtime';
-import { A as A$1, q as qe, a as qt, Q as Qe, I as It, z as z$1, b as tt, e as eventHandler, H as He } from '../_/nitro.mjs';
+import { q, A as Ae, a as At, Q as Qe, I as It, z as z$1, b as tt, e as eventHandler, H as He } from '../_/nitro.mjs';
 import m from 'tiny-invariant';
 import { defaultTransformer, isPlainObject, encode, isRedirect, isNotFound, useRouter } from '@tanstack/react-router';
 import * as v from 'node:fs';
@@ -50,7 +50,7 @@ function V(e) {
 }
 const O = (e, n, t) => e({ data: n.data, context: n.context, sendContext: n.sendContext, method: n.method, next: (r) => {
   var _a, _b;
-  const o = { ...n.context, ...r == null ? void 0 : r.context }, c = { ...n.sendContext, ...(_a = r == null ? void 0 : r.sendContext) != null ? _a : {} }, a = A$1(n.headers, r == null ? void 0 : r.headers);
+  const o = { ...n.context, ...r == null ? void 0 : r.context }, c = { ...n.sendContext, ...(_a = r == null ? void 0 : r.sendContext) != null ? _a : {} }, a = q(n.headers, r == null ? void 0 : r.headers);
   return t({ method: n.method, data: n.data, context: o, sendContext: c, headers: a, result: (_b = r == null ? void 0 : r.result) != null ? _b : n.result });
 } });
 function W(e, n) {
@@ -145,7 +145,7 @@ async function R(e, n) {
         const h = await e.text();
         return defaultTransformer.parse(h);
       })(), l = await i(u);
-      return l instanceof Response ? l : isRedirect(l) || isNotFound(l) ? S(l) : new Response(l !== void 0 ? defaultTransformer.stringify(l) : void 0, { status: It(qe()), headers: { "Content-Type": "application/json" } });
+      return l instanceof Response ? l : isRedirect(l) || isNotFound(l) ? S(l) : new Response(l !== void 0 ? defaultTransformer.stringify(l) : void 0, { status: It(Ae()), headers: { "Content-Type": "application/json" } });
     } catch (u) {
       return u instanceof Response ? u : isRedirect(u) || isNotFound(u) ? S(u) : (console.error("Server Fn Error!"), console.error(u), console.info(), new Response(JSON.stringify(u), { status: 500, headers: { "Content-Type": "application/json" } }));
     }
@@ -163,7 +163,7 @@ function S(e) {
 function b(e, n, t) {
   const r = Z("http://localhost:3000", n, t);
   return Object.assign((...c) => (m(c.length === 1, "Server functions can only accept a single argument"), Q(r, c, async (a) => {
-    const s = qe(), d = qt(s);
+    const s = Ae(), d = At(s);
     return Object.entries(d).forEach(([i, f]) => {
       a.headers.has(i) || a.headers.append(i, f);
     }), R(a);
@@ -192,4 +192,4 @@ function ne(e) {
 }
 
 export { te as $$function0, ne as $$function1, me as component, ge as loader };
-//# sourceMappingURL=index-Blt7xCCf.mjs.map
+//# sourceMappingURL=index-Cp9VEgZT.mjs.map

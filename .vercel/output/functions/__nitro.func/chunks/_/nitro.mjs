@@ -3843,7 +3843,7 @@ function renderHTMLError(error) {
 }
 
 const appConfig$1 = {"name":"vinxi","routers":[{"name":"public","type":"static","dir":"./public","base":"/","root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","order":0,"outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/public"},{"name":"client","type":"client","target":"browser","handler":"app/client.tsx","base":"/_build","build":{"sourcemap":true},"root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/client","order":1},{"name":"ssr","type":"http","target":"server","handler":"app/ssr.tsx","link":{"client":"client"},"root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","base":"/","outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/ssr","order":2},{"name":"server","type":"http","target":"server","base":"/_server","handler":"node_modules/@tanstack/start/dist/esm/server-handler/index.js","root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/server","order":3}],"server":{"preset":"vercel","experimental":{"asyncContext":true}},"root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com"};
-				const buildManifest = {"client":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-Dg24SOIr.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_client-BjkTD0X7.js":{"file":"assets/client-BjkTD0X7.js","name":"client","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_auth.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_auth/signin.tsx?tsr-split"],"assets":["assets/app-Dg24SOIr.css"]},"app/routes/_auth.tsx?tsr-split":{"file":"assets/_auth-DHWz1IZG.js","name":"_auth","src":"app/routes/_auth.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"app/routes/_auth/signin.tsx?tsr-split":{"file":"assets/signin-CWtpCaYe.js","name":"signin","src":"app/routes/_auth/signin.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-B9Ui2NuQ.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-BrMtRQ4f.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"virtual:$vinxi/handler/client":{"file":"assets/client-DvC0pycv.js","name":"client","src":"virtual:$vinxi/handler/client","isEntry":true,"imports":["_client-BjkTD0X7.js"]}},"ssr":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-Dg24SOIr.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_ssr-CW2B-WZs.js":{"file":"assets/ssr-CW2B-WZs.js","name":"ssr","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_auth.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_auth/signin.tsx?tsr-split"],"assets":["assets/app-Dg24SOIr.css"]},"app/routes/_auth.tsx?tsr-split":{"file":"assets/_auth-dY-acKrN.js","name":"_auth","src":"app/routes/_auth.tsx?tsr-split","isDynamicEntry":true},"app/routes/_auth/signin.tsx?tsr-split":{"file":"assets/signin-u_si_y9n.js","name":"signin","src":"app/routes/_auth/signin.tsx?tsr-split","isDynamicEntry":true},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-C2Z6N0Kw.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-Blt7xCCf.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_ssr-CW2B-WZs.js"]},"virtual:$vinxi/handler/ssr":{"file":"ssr.js","name":"ssr","src":"virtual:$vinxi/handler/ssr","isEntry":true,"imports":["_ssr-CW2B-WZs.js"]}},"server":{"app/routes/_layout/index.tsx?tsr-split":{"file":"c_1pabs3o.mjs","name":"c_1pabs3o","src":"app/routes/_layout/index.tsx?tsr-split","isEntry":true},"virtual:$vinxi/handler/server":{"file":"entry.mjs","name":"entry","src":"virtual:$vinxi/handler/server","isEntry":true}}};
+				const buildManifest = {"client":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-p3OlNsQf.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_client-BtSaofqp.js":{"file":"assets/client-BtSaofqp.js","name":"client","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_auth.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_auth/signin.tsx?tsr-split"],"assets":["assets/app-p3OlNsQf.css"]},"app/routes/_auth.tsx?tsr-split":{"file":"assets/_auth-CFlv0E-U.js","name":"_auth","src":"app/routes/_auth.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BtSaofqp.js"]},"app/routes/_auth/signin.tsx?tsr-split":{"file":"assets/signin-fSNslrlO.js","name":"signin","src":"app/routes/_auth/signin.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BtSaofqp.js"]},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-Bc-vmJcV.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BtSaofqp.js"]},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-BTd0Vl-m.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BtSaofqp.js"]},"virtual:$vinxi/handler/client":{"file":"assets/client-DvHGbvNu.js","name":"client","src":"virtual:$vinxi/handler/client","isEntry":true,"imports":["_client-BtSaofqp.js"]}},"ssr":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-p3OlNsQf.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_ssr-Cn_-F5S-.js":{"file":"assets/ssr-Cn_-F5S-.js","name":"ssr","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_auth.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_auth/signin.tsx?tsr-split"],"assets":["assets/app-p3OlNsQf.css"]},"app/routes/_auth.tsx?tsr-split":{"file":"assets/_auth-f1uqbOnR.js","name":"_auth","src":"app/routes/_auth.tsx?tsr-split","isDynamicEntry":true},"app/routes/_auth/signin.tsx?tsr-split":{"file":"assets/signin-Dx_0hJzA.js","name":"signin","src":"app/routes/_auth/signin.tsx?tsr-split","isDynamicEntry":true},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-C2Z6N0Kw.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-Cp9VEgZT.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_ssr-Cn_-F5S-.js"]},"virtual:$vinxi/handler/ssr":{"file":"ssr.js","name":"ssr","src":"virtual:$vinxi/handler/ssr","isEntry":true,"imports":["_ssr-Cn_-F5S-.js"]}},"server":{"app/routes/_layout/index.tsx?tsr-split":{"file":"c_1pabs3o.mjs","name":"c_1pabs3o","src":"app/routes/_layout/index.tsx?tsr-split","isEntry":true},"virtual:$vinxi/handler/server":{"file":"entry.mjs","name":"entry","src":"virtual:$vinxi/handler/server","isEntry":true}}};
 
 				const routeManifest = {};
 
@@ -4086,7 +4086,7 @@ function plugin() {
 			;
 }
 
-function h(e,t,n){return Object.assign(e,{url:"https://localhost:3000"})}function M$1(e){return e instanceof Headers?new Headers(e):Array.isArray(e)?new Headers(e):typeof e=="object"?new Headers(e):new Headers}function I$1(...e){return e.reduce((t,n)=>{const r=M$1(n);for(const[o,a]of r.entries())t.set(o,a);return t},new Headers)}function l$1(e,t){const n=t||e||{};return typeof n.method>"u"&&(n.method="GET"),{options:n,middleware:r=>l$1(void 0,Object.assign(n,{middleware:r})),validator:r=>l$1(void 0,Object.assign(n,{validator:r})),handler:(...r)=>{const[o,a]=r;Object.assign(n,{...o,extractedFn:o,serverFn:a}),m$1(o.url,"createServerFn must be called with a function that is marked with the 'use server' pragma. Are you using the @tanstack/start-vite-plugin ?");const s=[...n.middleware||[],N$1(n)];return Object.assign(async i=>f(s,"client",{...o,method:n.method,data:i?.data,headers:i?.headers,context:Object.assign({},o)}).then(c=>c.result),{...o,__executeServer:i=>{const c=i instanceof FormData?P$1(i):i;return f(s,"server",{...o,...c}).then(d=>({result:d.result,context:d.sendContext}))}})}}}function P$1(e){const t=e.get("__TSR_CONTEXT");if(e.delete("__TSR_CONTEXT"),typeof t!="string")return {context:{},data:e};try{return {context:defaultTransformer.parse(t),data:e}}catch{return {data:e}}}function k$1(e){const t=[],n=r=>{r.forEach(o=>{o.options.middleware&&n(o.options.middleware),t.push(o);});};return n(e),t}const u=(e,t,n)=>e({data:t.data,context:t.context,sendContext:t.sendContext,method:t.method,next:r=>{const o={...t.context,...r?.context},a={...t.sendContext,...r?.sendContext??{}},s=I$1(t.headers,r?.headers);return n({method:t.method,data:t.data,context:o,sendContext:a,headers:s,result:r?.result??t.result})}});function z$1(e,t){if(e==null)return {};if("~standard"in e){const n=e["~standard"].validate(t);if("value"in n)return n.value;throw n instanceof Promise?new Error("Async validation not supported"):new Error(JSON.stringify(n.issues,void 0,2))}if("parse"in e)return e.parse(t);if(typeof e=="function")return e(t);throw new Error("Invalid validator type!")}async function f(e,t,n){const r=k$1(e),o=async a=>{const s=r.shift();if(!s)return a;s.options.validator&&(t!=="client"||s.options.validateClient)&&(a.data=await z$1(s.options.validator,a.data));const i=t==="client"?s.options.client:s.options.server;return i?u(i,a,async c=>{if(t==="client"&&s.options.clientAfter){const d=await o(c);return u(s.options.clientAfter,d,F=>F)}return o(c)}):o(a)};return o({...n,headers:n.headers||{},sendContext:n.sendContext||{},context:n.context||{}})}function N$1(e){return {_types:void 0,options:{validator:e.validator,validateClient:e.validateClient,client:async({next:t,sendContext:n,...r})=>{var o;const a=await((o=e.extractedFn)==null?void 0:o.call(e,{...r,context:n}));return t(a)},server:async({next:t,...n})=>{var r;const o=await((r=e.serverFn)==null?void 0:r.call(e,n));return t({result:o})}}}}const G$1=createContext$1({counter:0,setCounter:()=>{}}),L$1=()=>Promise.resolve().then(()=>C),U$2=()=>Promise.resolve().then(()=>C),p=createFileRoute("/_layout/")({component:lazyRouteComponent(U$2,"component",()=>p.ssr),loader:lazyFn(L$1,"loader")}),w$1="count.txt";async function m(){return parseInt(await v$1.promises.readFile(w$1,"utf-8").catch(()=>"0"))}const y=l$1({method:"GET"}).handler(h(_),()=>m()),x=l$1().validator(e=>e).handler(h(g),async({data:e})=>{const t=await m();await v$1.promises.writeFile(w$1,`${t+e}`);}),X=function(){const t=useRouter(),n=p.useLoaderData(),{setCounter:r}=useContext(G$1);return jsxs("button",{type:"button",onClick:()=>{r(n),x({data:1}).then(()=>{t.invalidate();});},children:["Add 1 to ",n,"?"]})},B$1=async()=>await y();function _(e){return y.__executeServer(e)}function g(e){return x.__executeServer(e)}const C=Object.freeze(Object.defineProperty({__proto__:null,$$function0:_,$$function1:g,component:X,loader:B$1},Symbol.toStringTag,{value:"Module"}));
+function h(e,t,n){return Object.assign(e,{url:"https://localhost:3000"})}function M$1(e){return e instanceof Headers?new Headers(e):Array.isArray(e)?new Headers(e):typeof e=="object"?new Headers(e):new Headers}function I$1(...e){return e.reduce((t,n)=>{const r=M$1(n);for(const[o,a]of r.entries())t.set(o,a);return t},new Headers)}function l$1(e,t){const n=t||e||{};return typeof n.method>"u"&&(n.method="GET"),{options:n,middleware:r=>l$1(void 0,Object.assign(n,{middleware:r})),validator:r=>l$1(void 0,Object.assign(n,{validator:r})),handler:(...r)=>{const[o,a]=r;Object.assign(n,{...o,extractedFn:o,serverFn:a}),m$1(o.url,"createServerFn must be called with a function that is marked with the 'use server' pragma. Are you using the @tanstack/start-vite-plugin ?");const s=[...n.middleware||[],N$1(n)];return Object.assign(async i=>f(s,"client",{...o,method:n.method,data:i?.data,headers:i?.headers,context:Object.assign({},o)}).then(c=>c.result),{...o,__executeServer:i=>{const c=i instanceof FormData?P$1(i):i;return f(s,"server",{...o,...c}).then(d=>({result:d.result,context:d.sendContext}))}})}}}function P$1(e){const t=e.get("__TSR_CONTEXT");if(e.delete("__TSR_CONTEXT"),typeof t!="string")return {context:{},data:e};try{return {context:defaultTransformer.parse(t),data:e}}catch{return {data:e}}}function k$1(e){const t=[],n=r=>{r.forEach(o=>{o.options.middleware&&n(o.options.middleware),t.push(o);});};return n(e),t}const u=(e,t,n)=>e({data:t.data,context:t.context,sendContext:t.sendContext,method:t.method,next:r=>{const o={...t.context,...r?.context},a={...t.sendContext,...r?.sendContext??{}},s=I$1(t.headers,r?.headers);return n({method:t.method,data:t.data,context:o,sendContext:a,headers:s,result:r?.result??t.result})}});function z$1(e,t){if(e==null)return {};if("~standard"in e){const n=e["~standard"].validate(t);if("value"in n)return n.value;throw n instanceof Promise?new Error("Async validation not supported"):new Error(JSON.stringify(n.issues,void 0,2))}if("parse"in e)return e.parse(t);if(typeof e=="function")return e(t);throw new Error("Invalid validator type!")}async function f(e,t,n){const r=k$1(e),o=async a=>{const s=r.shift();if(!s)return a;s.options.validator&&(t!=="client"||s.options.validateClient)&&(a.data=await z$1(s.options.validator,a.data));const i=t==="client"?s.options.client:s.options.server;return i?u(i,a,async c=>{if(t==="client"&&s.options.clientAfter){const d=await o(c);return u(s.options.clientAfter,d,F=>F)}return o(c)}):o(a)};return o({...n,headers:n.headers||{},sendContext:n.sendContext||{},context:n.context||{}})}function N$1(e){return {_types:void 0,options:{validator:e.validator,validateClient:e.validateClient,client:async({next:t,sendContext:n,...r})=>{var o;const a=await((o=e.extractedFn)==null?void 0:o.call(e,{...r,context:n}));return t(a)},server:async({next:t,...n})=>{var r;const o=await((r=e.serverFn)==null?void 0:r.call(e,n));return t({result:o})}}}}const G$2=createContext$1({counter:0,setCounter:()=>{}}),L$1=()=>Promise.resolve().then(()=>C),U$2=()=>Promise.resolve().then(()=>C),p=createFileRoute("/_layout/")({component:lazyRouteComponent(U$2,"component",()=>p.ssr),loader:lazyFn(L$1,"loader")}),w$1="count.txt";async function m(){return parseInt(await v$1.promises.readFile(w$1,"utf-8").catch(()=>"0"))}const y=l$1({method:"GET"}).handler(h(_),()=>m()),x=l$1().validator(e=>e).handler(h(g),async({data:e})=>{const t=await m();await v$1.promises.writeFile(w$1,`${t+e}`);}),X=function(){const t=useRouter(),n=p.useLoaderData(),{setCounter:r}=useContext(G$2);return jsxs("button",{type:"button",onClick:()=>{r(n),x({data:1}).then(()=>{t.invalidate();});},children:["Add 1 to ",n,"?"]})},B$1=async()=>await y();function _(e){return y.__executeServer(e)}function g(e){return x.__executeServer(e)}const C=Object.freeze(Object.defineProperty({__proto__:null,$$function0:_,$$function1:g,component:X,loader:B$1},Symbol.toStringTag,{value:"Module"}));
 
 const mod_0_3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
@@ -4722,7 +4722,7 @@ const getContext = (key, opts = {}) => defaultNamespace.get(key, opts);
 const asyncHandlersKey = "__unctx_async_handlers__";
 const asyncHandlers = _globalThis[asyncHandlersKey] || (_globalThis[asyncHandlersKey] = /* @__PURE__ */ new Set());
 
-function F$1(e){let n;const t=R$1(e),s={duplex:"half",method:e.method,headers:e.headers};return e.node.req.body instanceof ArrayBuffer?new Request(t,{...s,body:e.node.req.body}):new Request(t,{...s,get body(){return n||(n=W$1(e),n)}})}function L(e){return e.web??={request:F$1(e),url:R$1(e)},e.web.request}function H$1(){return S()}const w=Symbol("$HTTPEvent");function O$1(e){return typeof e=="object"&&(e instanceof H3Event||e?.[w]instanceof H3Event||e?.__is_event__===!0)}function l(e){return function(...n){let t=n[0];if(O$1(t))n[0]=t instanceof H3Event||t.__is_event__?t:t[w];else {if(!globalThis.app.config.server.experimental?.asyncContext)throw new Error("AsyncLocalStorage was not enabled. Use the `server.experimental.asyncContext: true` option in your app configuration to enable it. Or, pass the instance of HTTPEvent that you have as the first argument to the function.");if(t=H$1(),!t)throw new Error("No HTTPEvent found in AsyncLocalStorage. Make sure you are using the function within the server runtime.");n.unshift(t);}return e(...n)}}const R$1=l(getRequestURL),P=l(getResponseStatus),W$1=l(getRequestWebStream);function I(){return getContext("nitro-app",{asyncContext:!!globalThis.app.config.server.experimental?.asyncContext,AsyncLocalStorage:AsyncLocalStorage})}function S(){return I().use().event}function U$1(e){return globalThis.MANIFEST[e]}const G=eventHandler(j$1);async function j$1(e){return J$1(L(e))}async function J$1(e,n){var t,s;const p=e.method,T=new URL(e.url,"http://localhost:3000"),a=Object.fromEntries(T.searchParams.entries()),i=a._serverFnId,d=a._serverFnName;if(!i||!d)throw new Error("Invalid request");m$1(typeof i=="string","Invalid server action");const b=(s=await((t=U$1("server").chunks[i])==null?void 0:t.import()))==null?void 0:s[d],u=await(async()=>{try{const r=await(async()=>{var y;if((y=e.headers.get("Content-Type"))!=null&&y.includes("multipart/form-data"))return m$1(p.toLowerCase()!=="get","GET requests with FormData payloads are not supported"),await e.formData();if(p.toLowerCase()==="get")return a.payload?defaultTransformer.parse(a.payload):void 0;const x=await e.text();return defaultTransformer.parse(x)})(),o=await b(r);return o instanceof Response?o:isRedirect(o)||isNotFound(o)?v(o):new Response(o!==void 0?defaultTransformer.stringify(o):void 0,{status:P(S()),headers:{"Content-Type":"application/json"}})}catch(r){return r instanceof Response?r:isRedirect(r)||isNotFound(r)?v(r):(console.error("Server Fn Error!"),console.error(r),console.info(),new Response(JSON.stringify(r),{status:500,headers:{"Content-Type":"application/json"}}))}})();if(u.headers.get("Content-Type")==="application/json"){const o=await u.clone().text();o&&JSON.stringify(JSON.parse(o));}return u}function v(e){const{headers:n,...t}=e;return new Response(JSON.stringify(t),{status:200,headers:{"Content-Type":"application/json",...e.headers||{}}})}
+function F$1(e){let n;const t=R$1(e),s={duplex:"half",method:e.method,headers:e.headers};return e.node.req.body instanceof ArrayBuffer?new Request(t,{...s,body:e.node.req.body}):new Request(t,{...s,get body(){return n||(n=W$1(e),n)}})}function L(e){return e.web??={request:F$1(e),url:R$1(e)},e.web.request}function H$1(){return S()}const w=Symbol("$HTTPEvent");function O$1(e){return typeof e=="object"&&(e instanceof H3Event||e?.[w]instanceof H3Event||e?.__is_event__===!0)}function l(e){return function(...n){let t=n[0];if(O$1(t))n[0]=t instanceof H3Event||t.__is_event__?t:t[w];else {if(!globalThis.app.config.server.experimental?.asyncContext)throw new Error("AsyncLocalStorage was not enabled. Use the `server.experimental.asyncContext: true` option in your app configuration to enable it. Or, pass the instance of HTTPEvent that you have as the first argument to the function.");if(t=H$1(),!t)throw new Error("No HTTPEvent found in AsyncLocalStorage. Make sure you are using the function within the server runtime.");n.unshift(t);}return e(...n)}}const R$1=l(getRequestURL),P=l(getResponseStatus),W$1=l(getRequestWebStream);function I(){return getContext("nitro-app",{asyncContext:!!globalThis.app.config.server.experimental?.asyncContext,AsyncLocalStorage:AsyncLocalStorage})}function S(){return I().use().event}function U$1(e){return globalThis.MANIFEST[e]}const G$1=eventHandler(j$1);async function j$1(e){return J(L(e))}async function J(e,n){var t,s;const p=e.method,T=new URL(e.url,"http://localhost:3000"),a=Object.fromEntries(T.searchParams.entries()),i=a._serverFnId,d=a._serverFnName;if(!i||!d)throw new Error("Invalid request");m$1(typeof i=="string","Invalid server action");const b=(s=await((t=U$1("server").chunks[i])==null?void 0:t.import()))==null?void 0:s[d],u=await(async()=>{try{const r=await(async()=>{var y;if((y=e.headers.get("Content-Type"))!=null&&y.includes("multipart/form-data"))return m$1(p.toLowerCase()!=="get","GET requests with FormData payloads are not supported"),await e.formData();if(p.toLowerCase()==="get")return a.payload?defaultTransformer.parse(a.payload):void 0;const x=await e.text();return defaultTransformer.parse(x)})(),o=await b(r);return o instanceof Response?o:isRedirect(o)||isNotFound(o)?v(o):new Response(o!==void 0?defaultTransformer.stringify(o):void 0,{status:P(S()),headers:{"Content-Type":"application/json"}})}catch(r){return r instanceof Response?r:isRedirect(r)||isNotFound(r)?v(r):(console.error("Server Fn Error!"),console.error(r),console.info(),new Response(JSON.stringify(r),{status:500,headers:{"Content-Type":"application/json"}}))}})();if(u.headers.get("Content-Type")==="application/json"){const o=await u.clone().text();o&&JSON.stringify(JSON.parse(o));}return u}function v(e){const{headers:n,...t}=e;return new Response(JSON.stringify(t),{status:200,headers:{"Content-Type":"application/json",...e.headers||{}}})}
 
 function Re(e, r, t) {
   if (!t.router.isServer) return r;
@@ -4821,7 +4821,7 @@ function He(e) {
   return (_a = e.web) != null ? _a : e.web = { request: be(e), url: D(e) }, e.web.request;
 }
 function Ee() {
-  return qe();
+  return Ae();
 }
 const W = Symbol("$HTTPEvent");
 function $e(e) {
@@ -4840,18 +4840,18 @@ function R(e) {
     return e(...r);
   };
 }
-const qt = R(getRequestHeaders), D = R(getRequestURL), It = R(getResponseStatus), Pe = R(getResponseHeaders), Me = R(getRequestWebStream);
-function Ae() {
+const At = R(getRequestHeaders), D = R(getRequestURL), It = R(getResponseStatus), Pe = R(getResponseHeaders), Me = R(getRequestWebStream);
+function qe() {
   var _a;
   return getContext("nitro-app", { asyncContext: !!((_a = globalThis.app.config.server.experimental) == null ? void 0 : _a.asyncContext), AsyncLocalStorage: AsyncLocalStorage });
 }
-function qe() {
-  return Ae().use().event;
+function Ae() {
+  return qe().use().event;
 }
 function Ie(e) {
   return e instanceof Headers ? new Headers(e) : Array.isArray(e) ? new Headers(e) : typeof e == "object" ? new Headers(e) : new Headers();
 }
-function A(...e) {
+function q(...e) {
   return e.reduce((r, t) => {
     const n = Ie(t);
     for (const [o, s] of n.entries()) r.set(o, s);
@@ -4868,9 +4868,9 @@ function Le({ createRouter: e, getRouterManifest: r }) {
 }
 function ke(e) {
   e.event.__tsrHeadersSent = true;
-  let r = A(Pe(e.event), { "Content-Type": "text/html; charset=UTF-8" }, ...e.router.state.matches.map((n) => n.headers));
+  let r = q(Pe(e.event), { "Content-Type": "text/html; charset=UTF-8" }, ...e.router.state.matches.map((n) => n.headers));
   const { redirect: t } = e.router.state;
-  return t && (r = A(r, t.headers, { Location: t.href })), r;
+  return t && (r = q(r, t.headers, { Location: t.href })), r;
 }
 function We(e) {
   const r = B(() => e.injectedHtml.map((t) => t()).join(""));
@@ -4888,11 +4888,11 @@ function De(e) {
     return r.flush((o) => (n.enqueue(o), true));
   } });
 }
-const Be = /(<body)/, Fe = /(<\/body>)/, Oe = /(<\/html>)/, Ne = /(<\/[a-zA-Z][\w:.-]*?>)/g, je = new TextDecoder();
+const Be = /(<body)/, Ne = /(<\/body>)/, Fe = /(<\/html>)/, Oe = /(<\/[a-zA-Z][\w:.-]*?>)/g, je = new TextDecoder();
 function B(e) {
   let r = false, t = "", n = "";
   return { async transform(o, s) {
-    const a = t + je.decode(o), i = a.match(Be), c = a.match(Fe), l = a.match(Oe);
+    const a = t + je.decode(o), i = a.match(Be), c = a.match(Ne), l = a.match(Fe);
     try {
       if (i && (r = true), !r) {
         s(a), t = "";
@@ -4904,7 +4904,7 @@ function B(e) {
         s(T), t = "";
       } else {
         let m, f = 0;
-        for (; (m = Ne.exec(a)) !== null; ) f = m.index + m[0].length;
+        for (; (m = Oe.exec(a)) !== null; ) f = m.index + m[0].length;
         if (f > 0) {
           const T = a.slice(0, f) + d + n;
           s(T), t = a.slice(f);
@@ -4935,25 +4935,25 @@ const ze = async ({ request: e, router: r, responseHeaders: t }) => {
     return new Response(a, { status: r.state.statusCode, headers: t });
   }
   throw new Error("No renderToReadableStream or renderToPipeableStream found in react-dom/server. Ensure you are using a version of react-dom that supports streaming.");
-}, Ue = () => ({ routes: { __root__: { filePath: "__root.tsx", children: ["/_auth", "/_layout"], preloads: ["\\_build\\assets\\client-DvC0pycv.js", "\\_build\\assets\\client-BjkTD0X7.js"] }, "/_auth": { filePath: "_auth.tsx", children: ["/_auth/signin"] }, "/_layout": { filePath: "_layout.tsx", children: ["/_layout/"] }, "/_auth/signin": { filePath: "_auth/signin.tsx", parent: "/_auth" }, "/_layout/": { filePath: "_layout/index.tsx", parent: "/_layout" } } });
+}, Ue = () => ({ routes: { __root__: { filePath: "__root.tsx", children: ["/_auth", "/_layout"], preloads: ["\\_build\\assets\\client-DvHGbvNu.js", "\\_build\\assets\\client-BtSaofqp.js"] }, "/_auth": { filePath: "_auth.tsx", children: ["/_auth/signin"] }, "/_layout": { filePath: "_layout.tsx", children: ["/_layout/"] }, "/_auth/signin": { filePath: "_auth/signin.tsx", parent: "/_auth" }, "/_layout/": { filePath: "_layout/index.tsx", parent: "/_layout" } } });
 function Qe(e) {
   return globalThis.MANIFEST[e];
 }
-function Je() {
+function Ge() {
   var _a;
   const e = Ue(), r = e.routes.__root__ = e.routes.__root__ || {};
   r.assets = r.assets || [];
   const t = Qe("client");
   return r.assets.push({ tag: "script", attrs: { src: (_a = t.inputs[t.handler]) == null ? void 0 : _a.output.path, type: "module", async: true, suppressHydrationWarning: true } }), e;
 }
-function Ve() {
-  const e = Je();
+function Je() {
+  const e = Ge();
   return { ...e, routes: Object.fromEntries(Object.entries(e.routes).map(([r, t]) => {
     const { preloads: n, assets: o } = t;
     return [r, { preloads: n, assets: o }];
   })) };
 }
-function F({ tag: e, attrs: r, children: t }) {
+function N({ tag: e, attrs: r, children: t }) {
   switch (e) {
     case "title":
       return jsx("title", { ...r, suppressHydrationWarning: true, children: t });
@@ -4969,7 +4969,7 @@ function F({ tag: e, attrs: r, children: t }) {
       return null;
   }
 }
-const Ge = () => {
+const Ve = () => {
   const e = useRouter(), r = useRouterState({ select: (s) => s.matches.map((a) => a.meta).filter(Boolean) }), t = g$1.useMemo(() => {
     const s = [], a = {};
     let i;
@@ -4994,12 +4994,12 @@ const Ge = () => {
       });
     }), a;
   }, structuralSharing: true });
-  return Ke([...t, ...o, ...n], (s) => JSON.stringify(s));
-}, Xe = () => {
-  const e = useRouter(), r = Ge(), t = g$1.useContext(Context.get("TanStackRouterHydrationContext", {}));
-  return jsxs(Fragment, { children: [r.map((n, o) => createElement(F, { ...n, key: `tsr-meta-${JSON.stringify(n)}` })), jsxs(Fragment, { children: [jsx(ScriptOnce, { log: false, children: '__TSR__={matches:[],streamedValues:{},queue:[],runQueue:()=>{let e=!1;__TSR__.queue=__TSR__.queue.filter((_=>!_()||(e=!0,!1))),e&&__TSR__.runQueue()},initMatch:e=>{__TSR__.queue.push((()=>(__TSR__.matches[e.index]||(__TSR__.matches[e.index]=e,Object.entries(e.extracted).forEach((([e,_])=>{if("stream"===_.type){let e;_.value=new ReadableStream({start(_){e=_}}),_.value.controller=e}else if("promise"===_.type){let e,t;_.value=new Promise(((_,u)=>{e=_,t=u})),_.resolve=e,_.reject=t}}))),!0))),__TSR__.runQueue()},resolvePromise:e=>{__TSR__.queue.push((()=>{const _=__TSR__.matches[e.matchIndex];if(_){const t=_.extracted[e.id];if(t)return t.resolve(e.value.data),!0}return!1})),__TSR__.runQueue()},cleanScripts:()=>{document.querySelectorAll(".tsr-once").forEach((e=>{e.remove()}))}};' }), jsx(ScriptOnce, { children: `__TSR__.dehydrated = ${S$1(e.options.transformer.stringify(t), { isScriptContext: true, wrap: true, json: true })}` })] })] });
-}, Ze = () => jsx(Fragment, { children: Xe() });
-function Ke(e, r) {
+  return Xe([...t, ...o, ...n], (s) => JSON.stringify(s));
+}, Ze = () => {
+  const e = useRouter(), r = Ve(), t = g$1.useContext(Context.get("TanStackRouterHydrationContext", {}));
+  return jsxs(Fragment, { children: [r.map((n, o) => createElement(N, { ...n, key: `tsr-meta-${JSON.stringify(n)}` })), jsxs(Fragment, { children: [jsx(ScriptOnce, { log: false, children: '__TSR__={matches:[],streamedValues:{},queue:[],runQueue:()=>{let e=!1;__TSR__.queue=__TSR__.queue.filter((_=>!_()||(e=!0,!1))),e&&__TSR__.runQueue()},initMatch:e=>{__TSR__.queue.push((()=>(__TSR__.matches[e.index]||(__TSR__.matches[e.index]=e,Object.entries(e.extracted).forEach((([e,_])=>{if("stream"===_.type){let e;_.value=new ReadableStream({start(_){e=_}}),_.value.controller=e}else if("promise"===_.type){let e,t;_.value=new Promise(((_,u)=>{e=_,t=u})),_.resolve=e,_.reject=t}}))),!0))),__TSR__.runQueue()},resolvePromise:e=>{__TSR__.queue.push((()=>{const _=__TSR__.matches[e.matchIndex];if(_){const t=_.extracted[e.id];if(t)return t.resolve(e.value.data),!0}return!1})),__TSR__.runQueue()},cleanScripts:()=>{document.querySelectorAll(".tsr-once").forEach((e=>{e.remove()}))}};' }), jsx(ScriptOnce, { children: `__TSR__.dehydrated = ${S$1(e.options.transformer.stringify(t), { isScriptContext: true, wrap: true, json: true })}` })] })] });
+}, Ke = () => jsx(Fragment, { children: Ze() });
+function Xe(e, r) {
   const t = /* @__PURE__ */ new Set();
   return e.filter((n) => {
     const o = r(n);
@@ -5016,27 +5016,27 @@ const Ye = () => {
       });
     }), s;
   }, structuralSharing: true }), { scripts: t } = useRouterState({ select: (o) => ({ scripts: o.matches.map((s) => s.scripts).filter(Boolean).flat(1).map(({ children: s, ...a }) => ({ tag: "script", attrs: { ...a, suppressHydrationWarning: true }, children: s })) }) }), n = [...t, ...r];
-  return jsx(Fragment, { children: n.map((o, s) => createElement(F, { ...o, key: `tsr-scripts-${o.tag}-${s}` })) });
-}, et = "/_build/assets/app-Dg24SOIr.css", tt = createContext$1({ counter: 0, setCounter: () => {
-} }), O = ({ children: e }) => {
+  return jsx(Fragment, { children: n.map((o, s) => createElement(N, { ...o, key: `tsr-scripts-${o.tag}-${s}` })) });
+}, et = "/_build/assets/app-p3OlNsQf.css", tt = createContext$1({ counter: 0, setCounter: () => {
+} }), F = ({ children: e }) => {
   const [r, t] = useState(0);
   return jsx(tt.Provider, { value: { counter: r, setCounter: t }, children: e });
-}, $ = createRootRouteWithContext()({ context: () => O, head: () => ({ meta: [{ charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: "Esigns" }] }), component: rt });
+}, $ = createRootRouteWithContext()({ context: () => F, head: () => ({ meta: [{ charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: "Esigns" }] }), component: rt });
 function rt() {
-  return jsx(O, { children: jsx(nt, { children: jsx(Outlet, {}) }) });
+  return jsx(F, { children: jsx(nt, { children: jsx(Outlet, {}) }) });
 }
 function nt({ children: e }) {
-  return jsxs("html", { children: [jsxs("head", { children: [jsx(Ze, {}), jsx("link", { rel: "stylesheet", href: et })] }), jsxs("body", { children: [e, jsx(ScrollRestoration, {}), jsx(Ye, {})] })] });
+  return jsxs("html", { children: [jsxs("head", { children: [jsx(Ke, {}), jsx("link", { rel: "stylesheet", href: et })] }), jsxs("body", { children: [e, jsx(ScrollRestoration, {}), jsx(Ye, {})] })] });
 }
-const ot = () => import('../build/_layout-C2Z6N0Kw.mjs'), N = createFileRoute("/_layout")({ component: lazyRouteComponent(ot, "component", () => N.ssr) }), st = () => import('../build/_auth-dY-acKrN.mjs'), j = createFileRoute("/_auth")({ component: lazyRouteComponent(st, "component", () => j.ssr) }), at = () => import('../build/index-Blt7xCCf.mjs'), it = () => import('../build/index-Blt7xCCf.mjs'), z = createFileRoute("/_layout/")({ component: lazyRouteComponent(it, "component", () => z.ssr), loader: lazyFn(at, "loader") }), ut = () => import('../build/signin-u_si_y9n.mjs'), U = createFileRoute("/_auth/signin")({ component: lazyRouteComponent(ut, "component", () => U.ssr) }), Q = N.update({ id: "/_layout", getParentRoute: () => $ }), J = j.update({ id: "/_auth", getParentRoute: () => $ }), ct = z.update({ id: "/", path: "/", getParentRoute: () => Q }), lt = U.update({ id: "/signin", path: "/signin", getParentRoute: () => J }), dt = { AuthSigninRoute: lt }, mt = J._addFileChildren(dt), ht = { LayoutIndexRoute: ct }, pt = Q._addFileChildren(ht), ft = { AuthRoute: mt, LayoutRoute: pt }, _t = $._addFileChildren(ft)._addFileTypes(), yt = () => jsxs("div", { children: [jsx("h1", { children: "404" }), jsx("p", { children: "Not Found" })] });
+const ot = () => import('../build/_layout-C2Z6N0Kw.mjs'), O = createFileRoute("/_layout")({ component: lazyRouteComponent(ot, "component", () => O.ssr) }), st = () => import('../build/_auth-f1uqbOnR.mjs'), j = createFileRoute("/_auth")({ component: lazyRouteComponent(st, "component", () => j.ssr) }), at = () => import('../build/index-Cp9VEgZT.mjs'), it = () => import('../build/index-Cp9VEgZT.mjs'), z = createFileRoute("/_layout/")({ component: lazyRouteComponent(it, "component", () => z.ssr), loader: lazyFn(at, "loader") }), ut = () => import('../build/signin-Dx_0hJzA.mjs'), U = createFileRoute("/_auth/signin")({ component: lazyRouteComponent(ut, "component", () => U.ssr) }), Q = O.update({ id: "/_layout", getParentRoute: () => $ }), G = j.update({ id: "/_auth", getParentRoute: () => $ }), ct = z.update({ id: "/", path: "/", getParentRoute: () => Q }), lt = U.update({ id: "/signin", path: "/signin", getParentRoute: () => G }), dt = { AuthSigninRoute: lt }, mt = G._addFileChildren(dt), ht = { LayoutIndexRoute: ct }, pt = Q._addFileChildren(ht), ft = { AuthRoute: mt, LayoutRoute: pt }, _t = $._addFileChildren(ft)._addFileTypes(), yt = () => jsxs("div", { children: [jsx("h1", { children: "404" }), jsx("p", { children: "Not Found" })] });
 function gt() {
   const e = new QueryClient();
   return routerWithQueryClient(createRouter$2({ routeTree: _t, context: { queryClient: e }, defaultPreload: "intent", defaultNotFoundComponent: yt }), e);
 }
-const Lt = Le({ createRouter: gt, getRouterManifest: Ve })(ze);
+const Lt = Le({ createRouter: gt, getRouterManifest: Je })(ze);
 
 const handlers = [
-  { route: '/_server', handler: G, lazy: false, middleware: true, method: undefined },
+  { route: '/_server', handler: G$1, lazy: false, middleware: true, method: undefined },
   { route: '/', handler: Lt, lazy: false, middleware: true, method: undefined }
 ];
 
@@ -6515,5 +6515,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { A, He as H, It as I, Qe as Q, qt as a, tt as b, eventHandler as e, parseQuery as p, qe as q, toNodeListener as t, useNitroApp as u, z };
+export { Ae as A, He as H, It as I, Qe as Q, At as a, tt as b, eventHandler as e, parseQuery as p, q, toNodeListener as t, useNitroApp as u, z };
 //# sourceMappingURL=nitro.mjs.map

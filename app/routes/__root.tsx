@@ -5,12 +5,11 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
-import { createAppContext } from "../context/appContext";
-import { MyRouterContext } from "../lib/interfaces/contextInterface";
 import appCss from "./styles/app.css?url";
+import { CreateAppContext } from "~/context/appContext";
 
-export const Route = createRootRouteWithContext<MyRouterContext>()({
-  context: () => createAppContext,
+export const Route = createRootRouteWithContext()({
+  context: () => CreateAppContext,
   head: () => ({
     meta: [
       {
@@ -21,7 +20,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStarter",
+        title: "Esigns",
       },
     ],
   }),
@@ -30,9 +29,11 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
 
 function RootComponent() {
   return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
+    <CreateAppContext>
+      <RootDocument>
+        <Outlet />
+      </RootDocument>
+    </CreateAppContext>
   );
 }
 

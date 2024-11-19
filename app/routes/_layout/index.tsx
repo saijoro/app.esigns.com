@@ -2,6 +2,9 @@
 import * as fs from "node:fs";
 import { createFileRoute, useRouter } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/start";
+import { AppContextType } from "../../lib/interfaces/contextInterface";
+import { AppContext } from "../../context/appContext";
+import { useContext } from "react";
 
 const filePath = "count.txt";
 
@@ -32,11 +35,13 @@ export const Route = createFileRoute("/_layout/")({
 function Home() {
   const router = useRouter();
   const state = Route.useLoaderData();
+  const { setCounter } = useContext(AppContext) as AppContextType;
 
   return (
     <button
       type="button"
       onClick={() => {
+        setCounter(state);
         updateCount({ data: 1 }).then(() => {
           router.invalidate();
         });

@@ -7,7 +7,7 @@ interface IAPIResponse {
   data: any;
 }
 class FetchService {
-  authStatusCodes: number[] = [401, 403];
+  authStatusCodes: number[] = [401];
   authErrorURLs: string[] = [
     "/auth/login",
     "/auth/reset-password",

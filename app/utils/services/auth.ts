@@ -5,7 +5,7 @@ export const loginAPI = async (payload: {
   password: string;
 }) => {
   try {
-    const response = await $fetch.post("/auth/login", payload);
+    const response = await $fetch.post("/signin", payload);
     return response;
   } catch (err) {
     throw err;

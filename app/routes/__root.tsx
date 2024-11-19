@@ -6,19 +6,21 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
-import { createAppContext } from "../context/appContext";
-import { MyRouterContext } from "../lib/interfaces/contextInterface";
+import { CreateAppContext } from "../context/appContext";
+import { AppContextType } from "../lib/interfaces/contextInterface";
 
-export const Route = createRootRouteWithContext<MyRouterContext>()({
-  context: () => createAppContext,
+export const Route = createRootRouteWithContext<AppContextType>()({
+  context: () => ({}), //default context values
   component: RootComponent,
 });
 
 function RootComponent() {
   return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
+    <CreateAppContext>
+      <RootDocument>
+        <Outlet />
+      </RootDocument>
+    </CreateAppContext>
   );
 }
 

@@ -1,19 +1,33 @@
 {
   "C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css": {
-    "file": "assets/app-BT3BuD0z.css",
+    "file": "assets/app-Dg24SOIr.css",
     "src": "C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"
   },
-  "_ssr-AfLqi4nv.js": {
-    "file": "assets/ssr-AfLqi4nv.js",
+  "_ssr-CW2B-WZs.js": {
+    "file": "assets/ssr-CW2B-WZs.js",
     "name": "ssr",
     "dynamicImports": [
       "app/routes/_layout.tsx?tsr-split",
+      "app/routes/_auth.tsx?tsr-split",
       "app/routes/_layout/index.tsx?tsr-split",
-      "app/routes/_layout/index.tsx?tsr-split"
+      "app/routes/_layout/index.tsx?tsr-split",
+      "app/routes/_auth/signin.tsx?tsr-split"
     ],
     "assets": [
-      "assets/app-BT3BuD0z.css"
+      "assets/app-Dg24SOIr.css"
     ]
+  },
+  "app/routes/_auth.tsx?tsr-split": {
+    "file": "assets/_auth-dY-acKrN.js",
+    "name": "_auth",
+    "src": "app/routes/_auth.tsx?tsr-split",
+    "isDynamicEntry": true
+  },
+  "app/routes/_auth/signin.tsx?tsr-split": {
+    "file": "assets/signin-u_si_y9n.js",
+    "name": "signin",
+    "src": "app/routes/_auth/signin.tsx?tsr-split",
+    "isDynamicEntry": true
   },
   "app/routes/_layout.tsx?tsr-split": {
     "file": "assets/_layout-C2Z6N0Kw.js",
@@ -22,12 +36,12 @@
     "isDynamicEntry": true
   },
   "app/routes/_layout/index.tsx?tsr-split": {
-    "file": "assets/index-xf7AXn-T.js",
+    "file": "assets/index-Blt7xCCf.js",
     "name": "index",
     "src": "app/routes/_layout/index.tsx?tsr-split",
     "isDynamicEntry": true,
     "imports": [
-      "_ssr-AfLqi4nv.js"
+      "_ssr-CW2B-WZs.js"
     ]
   },
   "virtual:$vinxi/handler/ssr": {
@@ -36,7 +50,7 @@
     "src": "virtual:$vinxi/handler/ssr",
     "isEntry": true,
     "imports": [
-      "_ssr-AfLqi4nv.js"
+      "_ssr-CW2B-WZs.js"
     ]
   }
 }

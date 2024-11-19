@@ -1,0 +1,1 @@
+import{jsx as t,jsxs as n}from"react/jsx-runtime";import{Outlet as o}from"@tanstack/react-router";const e=()=>t("div",{className:"bg-[#fbf7ec]",children:t(o,{})}),m=function(){return n("div",{children:[t(e,{}),t(o,{})]})};export{m as component};

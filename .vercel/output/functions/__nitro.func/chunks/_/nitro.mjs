@@ -8,10 +8,10 @@ import * as v$1 from 'node:fs';
 import { promises, existsSync } from 'node:fs';
 import { defaultTransformer, useRouter, createFileRoute, lazyFn, lazyRouteComponent, isRedirect, isNotFound, createMemoryHistory, isPlainArray, isPlainObject as isPlainObject$1, createControlledPromise, defer as defer$1, createRouter as createRouter$2, createRootRouteWithContext, useRouterState, ScriptOnce, ScrollRestoration, Outlet, pick, RouterProvider } from '@tanstack/react-router';
 import m$1 from 'tiny-invariant';
+import * as g$1 from 'react';
+import { useContext, createContext as createContext$1, useState, createElement } from 'react';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import * as S$1 from 'react';
-import { createElement, createContext as createContext$1 } from 'react';
-import g$1 from 'jsesc';
+import S$1 from 'jsesc';
 import { PassThrough, Transform } from 'node:stream';
 import { isbot } from 'isbot';
 import x$1 from 'react-dom/server';
@@ -764,7 +764,7 @@ var __publicField$3 = (obj, key, value) => {
   __defNormalProp$3(obj, key + "" , value);
   return value;
 };
-const H$1 = [
+const H$2 = [
   1779033703,
   -1150833019,
   1013904242,
@@ -844,14 +844,14 @@ const W$2 = [];
 class SHA256 extends Hasher {
   constructor() {
     super(...arguments);
-    __publicField$3(this, "_hash", new WordArray([...H$1]));
+    __publicField$3(this, "_hash", new WordArray([...H$2]));
   }
   /**
    * Resets the internal state of the hash object to initial values.
    */
   reset() {
     super.reset();
-    this._hash = new WordArray([...H$1]);
+    this._hash = new WordArray([...H$2]);
   }
   _doProcessBlock(M, offset) {
     const H2 = this._hash.words;
@@ -3843,7 +3843,7 @@ function renderHTMLError(error) {
 }
 
 const appConfig$1 = {"name":"vinxi","routers":[{"name":"public","type":"static","dir":"./public","base":"/","root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","order":0,"outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/public"},{"name":"client","type":"client","target":"browser","handler":"app/client.tsx","base":"/_build","build":{"sourcemap":true},"root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/client","order":1},{"name":"ssr","type":"http","target":"server","handler":"app/ssr.tsx","link":{"client":"client"},"root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","base":"/","outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/ssr","order":2},{"name":"server","type":"http","target":"server","base":"/_server","handler":"node_modules/@tanstack/start/dist/esm/server-handler/index.js","root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com","outDir":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/.vinxi/build/server","order":3}],"server":{"preset":"vercel","experimental":{"asyncContext":true}},"root":"C:\\Users\\Prasanth\\Documents\\Orotron\\app.esigns.com"};
-				const buildManifest = {"client":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-BT3BuD0z.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_client-ChOrW0Tx.js":{"file":"assets/client-ChOrW0Tx.js","name":"client","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split"],"assets":["assets/app-BT3BuD0z.css"]},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-BjdejPOa.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-ChOrW0Tx.js"]},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-DfHYE-FO.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-ChOrW0Tx.js"]},"virtual:$vinxi/handler/client":{"file":"assets/client-D_FFMy6y.js","name":"client","src":"virtual:$vinxi/handler/client","isEntry":true,"imports":["_client-ChOrW0Tx.js"]}},"ssr":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-BT3BuD0z.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_ssr-AfLqi4nv.js":{"file":"assets/ssr-AfLqi4nv.js","name":"ssr","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split"],"assets":["assets/app-BT3BuD0z.css"]},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-C2Z6N0Kw.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-xf7AXn-T.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_ssr-AfLqi4nv.js"]},"virtual:$vinxi/handler/ssr":{"file":"ssr.js","name":"ssr","src":"virtual:$vinxi/handler/ssr","isEntry":true,"imports":["_ssr-AfLqi4nv.js"]}},"server":{"app/routes/_layout/index.tsx?tsr-split":{"file":"c_1pabs3o.mjs","name":"c_1pabs3o","src":"app/routes/_layout/index.tsx?tsr-split","isEntry":true},"virtual:$vinxi/handler/server":{"file":"entry.mjs","name":"entry","src":"virtual:$vinxi/handler/server","isEntry":true}}};
+				const buildManifest = {"client":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-Dg24SOIr.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_client-BjkTD0X7.js":{"file":"assets/client-BjkTD0X7.js","name":"client","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_auth.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_auth/signin.tsx?tsr-split"],"assets":["assets/app-Dg24SOIr.css"]},"app/routes/_auth.tsx?tsr-split":{"file":"assets/_auth-DHWz1IZG.js","name":"_auth","src":"app/routes/_auth.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"app/routes/_auth/signin.tsx?tsr-split":{"file":"assets/signin-CWtpCaYe.js","name":"signin","src":"app/routes/_auth/signin.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-B9Ui2NuQ.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-BrMtRQ4f.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_client-BjkTD0X7.js"]},"virtual:$vinxi/handler/client":{"file":"assets/client-DvC0pycv.js","name":"client","src":"virtual:$vinxi/handler/client","isEntry":true,"imports":["_client-BjkTD0X7.js"]}},"ssr":{"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css":{"file":"assets/app-Dg24SOIr.css","src":"C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"},"_ssr-CW2B-WZs.js":{"file":"assets/ssr-CW2B-WZs.js","name":"ssr","dynamicImports":["app/routes/_layout.tsx?tsr-split","app/routes/_auth.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_layout/index.tsx?tsr-split","app/routes/_auth/signin.tsx?tsr-split"],"assets":["assets/app-Dg24SOIr.css"]},"app/routes/_auth.tsx?tsr-split":{"file":"assets/_auth-dY-acKrN.js","name":"_auth","src":"app/routes/_auth.tsx?tsr-split","isDynamicEntry":true},"app/routes/_auth/signin.tsx?tsr-split":{"file":"assets/signin-u_si_y9n.js","name":"signin","src":"app/routes/_auth/signin.tsx?tsr-split","isDynamicEntry":true},"app/routes/_layout.tsx?tsr-split":{"file":"assets/_layout-C2Z6N0Kw.js","name":"_layout","src":"app/routes/_layout.tsx?tsr-split","isDynamicEntry":true},"app/routes/_layout/index.tsx?tsr-split":{"file":"assets/index-Blt7xCCf.js","name":"index","src":"app/routes/_layout/index.tsx?tsr-split","isDynamicEntry":true,"imports":["_ssr-CW2B-WZs.js"]},"virtual:$vinxi/handler/ssr":{"file":"ssr.js","name":"ssr","src":"virtual:$vinxi/handler/ssr","isEntry":true,"imports":["_ssr-CW2B-WZs.js"]}},"server":{"app/routes/_layout/index.tsx?tsr-split":{"file":"c_1pabs3o.mjs","name":"c_1pabs3o","src":"app/routes/_layout/index.tsx?tsr-split","isEntry":true},"virtual:$vinxi/handler/server":{"file":"entry.mjs","name":"entry","src":"virtual:$vinxi/handler/server","isEntry":true}}};
 
 				const routeManifest = {};
 
@@ -4086,14 +4086,14 @@ function plugin() {
 			;
 }
 
-function h(e,t,n){return Object.assign(e,{url:"https://localhost:3000"})}function E$1(e){return e instanceof Headers?new Headers(e):Array.isArray(e)?new Headers(e):typeof e=="object"?new Headers(e):new Headers}function M$1(...e){return e.reduce((t,n)=>{const r=E$1(n);for(const[o,a]of r.entries())t.set(o,a);return t},new Headers)}function l$1(e,t){const n=t||e||{};return typeof n.method>"u"&&(n.method="GET"),{options:n,middleware:r=>l$1(void 0,Object.assign(n,{middleware:r})),validator:r=>l$1(void 0,Object.assign(n,{validator:r})),handler:(...r)=>{const[o,a]=r;Object.assign(n,{...o,extractedFn:o,serverFn:a}),m$1(o.url,"createServerFn must be called with a function that is marked with the 'use server' pragma. Are you using the @tanstack/start-vite-plugin ?");const s=[...n.middleware||[],k$1(n)];return Object.assign(async i=>f(s,"client",{...o,method:n.method,data:i?.data,headers:i?.headers,context:Object.assign({},o)}).then(d=>d.result),{...o,__executeServer:i=>{const d=i instanceof FormData?A$1(i):i;return f(s,"server",{...o,...d}).then(c=>({result:c.result,context:c.sendContext}))}})}}}function A$1(e){const t=e.get("__TSR_CONTEXT");if(e.delete("__TSR_CONTEXT"),typeof t!="string")return {context:{},data:e};try{return {context:defaultTransformer.parse(t),data:e}}catch{return {data:e}}}function I$1(e){const t=[],n=r=>{r.forEach(o=>{o.options.middleware&&n(o.options.middleware),t.push(o);});};return n(e),t}const u=(e,t,n)=>e({data:t.data,context:t.context,sendContext:t.sendContext,method:t.method,next:r=>{const o={...t.context,...r?.context},a={...t.sendContext,...r?.sendContext??{}},s=M$1(t.headers,r?.headers);return n({method:t.method,data:t.data,context:o,sendContext:a,headers:s,result:r?.result??t.result})}});function P$1(e,t){if(e==null)return {};if("~standard"in e){const n=e["~standard"].validate(t);if("value"in n)return n.value;throw n instanceof Promise?new Error("Async validation not supported"):new Error(JSON.stringify(n.issues,void 0,2))}if("parse"in e)return e.parse(t);if(typeof e=="function")return e(t);throw new Error("Invalid validator type!")}async function f(e,t,n){const r=I$1(e),o=async a=>{const s=r.shift();if(!s)return a;s.options.validator&&(t!=="client"||s.options.validateClient)&&(a.data=await P$1(s.options.validator,a.data));const i=t==="client"?s.options.client:s.options.server;return i?u(i,a,async d=>{if(t==="client"&&s.options.clientAfter){const c=await o(d);return u(s.options.clientAfter,c,b=>b)}return o(d)}):o(a)};return o({...n,headers:n.headers||{},sendContext:n.sendContext||{},context:n.context||{}})}function k$1(e){return {_types:void 0,options:{validator:e.validator,validateClient:e.validateClient,client:async({next:t,sendContext:n,...r})=>{var o;const a=await((o=e.extractedFn)==null?void 0:o.call(e,{...r,context:n}));return t(a)},server:async({next:t,...n})=>{var r;const o=await((r=e.serverFn)==null?void 0:r.call(e,n));return t({result:o})}}}}const z=()=>Promise.resolve().then(()=>F$2),N$1=()=>Promise.resolve().then(()=>F$2),p=createFileRoute("/_layout/")({component:lazyRouteComponent(N$1,"component",()=>p.ssr),loader:lazyFn(z,"loader")}),w$1="count.txt";async function m(){return parseInt(await v$1.promises.readFile(w$1,"utf-8").catch(()=>"0"))}const y=l$1({method:"GET"}).handler(h(_),()=>m()),x=l$1().validator(e=>e).handler(h(g),async({data:e})=>{const t=await m();await v$1.promises.writeFile(w$1,`${t+e}`);}),G$1=function(){const t=useRouter(),n=p.useLoaderData();return jsxs("button",{type:"button",onClick:()=>{x({data:1}).then(()=>{t.invalidate();});},children:["Add 1 to ",n,"?"]})},L$1=async()=>await y();function _(e){return y.__executeServer(e)}function g(e){return x.__executeServer(e)}const F$2=Object.freeze(Object.defineProperty({__proto__:null,$$function0:_,$$function1:g,component:G$1,loader:L$1},Symbol.toStringTag,{value:"Module"}));
+function h(e,t,n){return Object.assign(e,{url:"https://localhost:3000"})}function M$1(e){return e instanceof Headers?new Headers(e):Array.isArray(e)?new Headers(e):typeof e=="object"?new Headers(e):new Headers}function I$1(...e){return e.reduce((t,n)=>{const r=M$1(n);for(const[o,a]of r.entries())t.set(o,a);return t},new Headers)}function l$1(e,t){const n=t||e||{};return typeof n.method>"u"&&(n.method="GET"),{options:n,middleware:r=>l$1(void 0,Object.assign(n,{middleware:r})),validator:r=>l$1(void 0,Object.assign(n,{validator:r})),handler:(...r)=>{const[o,a]=r;Object.assign(n,{...o,extractedFn:o,serverFn:a}),m$1(o.url,"createServerFn must be called with a function that is marked with the 'use server' pragma. Are you using the @tanstack/start-vite-plugin ?");const s=[...n.middleware||[],N$1(n)];return Object.assign(async i=>f(s,"client",{...o,method:n.method,data:i?.data,headers:i?.headers,context:Object.assign({},o)}).then(c=>c.result),{...o,__executeServer:i=>{const c=i instanceof FormData?P$1(i):i;return f(s,"server",{...o,...c}).then(d=>({result:d.result,context:d.sendContext}))}})}}}function P$1(e){const t=e.get("__TSR_CONTEXT");if(e.delete("__TSR_CONTEXT"),typeof t!="string")return {context:{},data:e};try{return {context:defaultTransformer.parse(t),data:e}}catch{return {data:e}}}function k$1(e){const t=[],n=r=>{r.forEach(o=>{o.options.middleware&&n(o.options.middleware),t.push(o);});};return n(e),t}const u=(e,t,n)=>e({data:t.data,context:t.context,sendContext:t.sendContext,method:t.method,next:r=>{const o={...t.context,...r?.context},a={...t.sendContext,...r?.sendContext??{}},s=I$1(t.headers,r?.headers);return n({method:t.method,data:t.data,context:o,sendContext:a,headers:s,result:r?.result??t.result})}});function z$1(e,t){if(e==null)return {};if("~standard"in e){const n=e["~standard"].validate(t);if("value"in n)return n.value;throw n instanceof Promise?new Error("Async validation not supported"):new Error(JSON.stringify(n.issues,void 0,2))}if("parse"in e)return e.parse(t);if(typeof e=="function")return e(t);throw new Error("Invalid validator type!")}async function f(e,t,n){const r=k$1(e),o=async a=>{const s=r.shift();if(!s)return a;s.options.validator&&(t!=="client"||s.options.validateClient)&&(a.data=await z$1(s.options.validator,a.data));const i=t==="client"?s.options.client:s.options.server;return i?u(i,a,async c=>{if(t==="client"&&s.options.clientAfter){const d=await o(c);return u(s.options.clientAfter,d,F=>F)}return o(c)}):o(a)};return o({...n,headers:n.headers||{},sendContext:n.sendContext||{},context:n.context||{}})}function N$1(e){return {_types:void 0,options:{validator:e.validator,validateClient:e.validateClient,client:async({next:t,sendContext:n,...r})=>{var o;const a=await((o=e.extractedFn)==null?void 0:o.call(e,{...r,context:n}));return t(a)},server:async({next:t,...n})=>{var r;const o=await((r=e.serverFn)==null?void 0:r.call(e,n));return t({result:o})}}}}const G$1=createContext$1({counter:0,setCounter:()=>{}}),L$1=()=>Promise.resolve().then(()=>C),U$2=()=>Promise.resolve().then(()=>C),p=createFileRoute("/_layout/")({component:lazyRouteComponent(U$2,"component",()=>p.ssr),loader:lazyFn(L$1,"loader")}),w$1="count.txt";async function m(){return parseInt(await v$1.promises.readFile(w$1,"utf-8").catch(()=>"0"))}const y=l$1({method:"GET"}).handler(h(_),()=>m()),x=l$1().validator(e=>e).handler(h(g),async({data:e})=>{const t=await m();await v$1.promises.writeFile(w$1,`${t+e}`);}),X=function(){const t=useRouter(),n=p.useLoaderData(),{setCounter:r}=useContext(G$1);return jsxs("button",{type:"button",onClick:()=>{r(n),x({data:1}).then(()=>{t.invalidate();});},children:["Add 1 to ",n,"?"]})},B$1=async()=>await y();function _(e){return y.__executeServer(e)}function g(e){return x.__executeServer(e)}const C=Object.freeze(Object.defineProperty({__proto__:null,$$function0:_,$$function1:g,component:X,loader:B$1},Symbol.toStringTag,{value:"Module"}));
 
 const mod_0_3 = /*#__PURE__*/Object.freeze({
   __proto__: null,
   $$function0: _,
   $$function1: g,
-  component: G$1,
-  loader: L$1
+  component: X,
+  loader: B$1
 });
 
 const chunks = {};
@@ -4722,258 +4722,258 @@ const getContext = (key, opts = {}) => defaultNamespace.get(key, opts);
 const asyncHandlersKey = "__unctx_async_handlers__";
 const asyncHandlers = _globalThis[asyncHandlersKey] || (_globalThis[asyncHandlersKey] = /* @__PURE__ */ new Set());
 
-function F$1(e){let n;const t=R$1(e),s={duplex:"half",method:e.method,headers:e.headers};return e.node.req.body instanceof ArrayBuffer?new Request(t,{...s,body:e.node.req.body}):new Request(t,{...s,get body(){return n||(n=W$1(e),n)}})}function L(e){return e.web??={request:F$1(e),url:R$1(e)},e.web.request}function H(){return S()}const w=Symbol("$HTTPEvent");function O$1(e){return typeof e=="object"&&(e instanceof H3Event||e?.[w]instanceof H3Event||e?.__is_event__===!0)}function l(e){return function(...n){let t=n[0];if(O$1(t))n[0]=t instanceof H3Event||t.__is_event__?t:t[w];else {if(!globalThis.app.config.server.experimental?.asyncContext)throw new Error("AsyncLocalStorage was not enabled. Use the `server.experimental.asyncContext: true` option in your app configuration to enable it. Or, pass the instance of HTTPEvent that you have as the first argument to the function.");if(t=H(),!t)throw new Error("No HTTPEvent found in AsyncLocalStorage. Make sure you are using the function within the server runtime.");n.unshift(t);}return e(...n)}}const R$1=l(getRequestURL),P=l(getResponseStatus),W$1=l(getRequestWebStream);function I(){return getContext("nitro-app",{asyncContext:!!globalThis.app.config.server.experimental?.asyncContext,AsyncLocalStorage:AsyncLocalStorage})}function S(){return I().use().event}function U(e){return globalThis.MANIFEST[e]}const G=eventHandler(j$1);async function j$1(e){return J(L(e))}async function J(e,n){var t,s;const p=e.method,T=new URL(e.url,"http://localhost:3000"),a=Object.fromEntries(T.searchParams.entries()),i=a._serverFnId,d=a._serverFnName;if(!i||!d)throw new Error("Invalid request");m$1(typeof i=="string","Invalid server action");const b=(s=await((t=U("server").chunks[i])==null?void 0:t.import()))==null?void 0:s[d],u=await(async()=>{try{const r=await(async()=>{var y;if((y=e.headers.get("Content-Type"))!=null&&y.includes("multipart/form-data"))return m$1(p.toLowerCase()!=="get","GET requests with FormData payloads are not supported"),await e.formData();if(p.toLowerCase()==="get")return a.payload?defaultTransformer.parse(a.payload):void 0;const x=await e.text();return defaultTransformer.parse(x)})(),o=await b(r);return o instanceof Response?o:isRedirect(o)||isNotFound(o)?v(o):new Response(o!==void 0?defaultTransformer.stringify(o):void 0,{status:P(S()),headers:{"Content-Type":"application/json"}})}catch(r){return r instanceof Response?r:isRedirect(r)||isNotFound(r)?v(r):(console.error("Server Fn Error!"),console.error(r),console.info(),new Response(JSON.stringify(r),{status:500,headers:{"Content-Type":"application/json"}}))}})();if(u.headers.get("Content-Type")==="application/json"){const o=await u.clone().text();o&&JSON.stringify(JSON.parse(o));}return u}function v(e){const{headers:n,...t}=e;return new Response(JSON.stringify(t),{status:200,headers:{"Content-Type":"application/json",...e.headers||{}}})}
+function F$1(e){let n;const t=R$1(e),s={duplex:"half",method:e.method,headers:e.headers};return e.node.req.body instanceof ArrayBuffer?new Request(t,{...s,body:e.node.req.body}):new Request(t,{...s,get body(){return n||(n=W$1(e),n)}})}function L(e){return e.web??={request:F$1(e),url:R$1(e)},e.web.request}function H$1(){return S()}const w=Symbol("$HTTPEvent");function O$1(e){return typeof e=="object"&&(e instanceof H3Event||e?.[w]instanceof H3Event||e?.__is_event__===!0)}function l(e){return function(...n){let t=n[0];if(O$1(t))n[0]=t instanceof H3Event||t.__is_event__?t:t[w];else {if(!globalThis.app.config.server.experimental?.asyncContext)throw new Error("AsyncLocalStorage was not enabled. Use the `server.experimental.asyncContext: true` option in your app configuration to enable it. Or, pass the instance of HTTPEvent that you have as the first argument to the function.");if(t=H$1(),!t)throw new Error("No HTTPEvent found in AsyncLocalStorage. Make sure you are using the function within the server runtime.");n.unshift(t);}return e(...n)}}const R$1=l(getRequestURL),P=l(getResponseStatus),W$1=l(getRequestWebStream);function I(){return getContext("nitro-app",{asyncContext:!!globalThis.app.config.server.experimental?.asyncContext,AsyncLocalStorage:AsyncLocalStorage})}function S(){return I().use().event}function U$1(e){return globalThis.MANIFEST[e]}const G=eventHandler(j$1);async function j$1(e){return J$1(L(e))}async function J$1(e,n){var t,s;const p=e.method,T=new URL(e.url,"http://localhost:3000"),a=Object.fromEntries(T.searchParams.entries()),i=a._serverFnId,d=a._serverFnName;if(!i||!d)throw new Error("Invalid request");m$1(typeof i=="string","Invalid server action");const b=(s=await((t=U$1("server").chunks[i])==null?void 0:t.import()))==null?void 0:s[d],u=await(async()=>{try{const r=await(async()=>{var y;if((y=e.headers.get("Content-Type"))!=null&&y.includes("multipart/form-data"))return m$1(p.toLowerCase()!=="get","GET requests with FormData payloads are not supported"),await e.formData();if(p.toLowerCase()==="get")return a.payload?defaultTransformer.parse(a.payload):void 0;const x=await e.text();return defaultTransformer.parse(x)})(),o=await b(r);return o instanceof Response?o:isRedirect(o)||isNotFound(o)?v(o):new Response(o!==void 0?defaultTransformer.stringify(o):void 0,{status:P(S()),headers:{"Content-Type":"application/json"}})}catch(r){return r instanceof Response?r:isRedirect(r)||isNotFound(r)?v(r):(console.error("Server Fn Error!"),console.error(r),console.info(),new Response(JSON.stringify(r),{status:500,headers:{"Content-Type":"application/json"}}))}})();if(u.headers.get("Content-Type")==="application/json"){const o=await u.clone().text();o&&JSON.stringify(JSON.parse(o));}return u}function v(e){const{headers:n,...t}=e;return new Response(JSON.stringify(t),{status:200,headers:{"Content-Type":"application/json",...e.headers||{}}})}
 
-function he(e, t, r) {
-  if (!r.router.isServer) return t;
-  r.match.extracted = r.match.extracted || [];
-  const n = r.match.extracted;
-  return b(t, (s, a) => {
+function Re(e, r, t) {
+  if (!t.router.isServer) return r;
+  t.match.extracted = t.match.extracted || [];
+  const n = t.match.extracted;
+  return H(r, (s, a) => {
     const i = s instanceof ReadableStream ? "stream" : s instanceof Promise ? "promise" : void 0;
     if (i) {
-      const c = { dataType: e, type: i, path: a, id: n.length, value: s, matchIndex: r.match.index };
+      const c = { dataType: e, type: i, path: a, id: n.length, value: s, matchIndex: t.match.index };
       if (n.push(c), i === "stream") {
         const [l, d] = s.tee();
-        return c.streamState = Re({ stream: d }), l;
+        return c.streamState = we({ stream: d }), l;
       } else defer$1(s);
     }
     return s;
   });
 }
-function _e(e) {
-  const t = useRouter(), r = t.state.matches[e.matchIndex];
-  if (!t.isServer) return null;
-  const n = r.extracted, [o, s] = ["__beforeLoadContext", "loaderData"].map((a) => n ? n.reduce((i, c) => c.dataType !== a ? C(i, ["temp", ...c.path], void 0) : i, { temp: r[a] }).temp : r[a]);
+function xe(e) {
+  const r = useRouter(), t = r.state.matches[e.matchIndex];
+  if (!r.isServer) return null;
+  const n = t.extracted, [o, s] = ["__beforeLoadContext", "loaderData"].map((a) => n ? n.reduce((i, c) => c.dataType !== a ? E(i, ["temp", ...c.path], void 0) : i, { temp: t[a] }).temp : t[a]);
   if (o !== void 0 || s !== void 0 || (n == null ? void 0 : n.length)) {
-    const a = `__TSR__.initMatch(${g$1({ index: e.matchIndex, __beforeLoadContext: t.options.transformer.stringify(o), loaderData: t.options.transformer.stringify(s), extracted: n ? Object.fromEntries(n.map((i) => [i.id, pick(i, ["type", "path"])])) : {} }, { isScriptContext: true, wrap: true, json: true })})`;
-    return jsxs(Fragment, { children: [jsx(ScriptOnce, { children: a }), n ? n.map((i) => i.type === "stream" ? jsx(ge, { entry: i }, i.id) : jsx(ye, { entry: i }, i.id)) : null] });
+    const a = `__TSR__.initMatch(${S$1({ index: e.matchIndex, __beforeLoadContext: r.options.transformer.stringify(o), loaderData: r.options.transformer.stringify(s), extracted: n ? Object.fromEntries(n.map((i) => [i.id, pick(i, ["type", "path"])])) : {} }, { isScriptContext: true, wrap: true, json: true })})`;
+    return jsxs(Fragment, { children: [jsx(ScriptOnce, { children: a }), n ? n.map((i) => i.type === "stream" ? jsx(Te, { entry: i }, i.id) : jsx(ve, { entry: i }, i.id)) : null] });
   }
   return null;
 }
-function b(e, t, r = []) {
-  if (isPlainArray(e)) return e.map((o, s) => b(o, t, [...r, `${s}`]));
+function H(e, r, t = []) {
+  if (isPlainArray(e)) return e.map((o, s) => H(o, r, [...t, `${s}`]));
   if (isPlainObject$1(e)) {
     const o = {};
-    for (const s in e) o[s] = b(e[s], t, [...r, s]);
+    for (const s in e) o[s] = H(e[s], r, [...t, s]);
     return o;
   }
-  const n = t(e, r);
+  const n = r(e, t);
   return n !== e ? n : e;
 }
-function ye({ entry: e }) {
-  return jsx("div", { className: "tsr-once", children: jsx(S$1.Suspense, { fallback: null, children: jsx(Se, { entry: e }) }) });
+function ve({ entry: e }) {
+  return jsx("div", { className: "tsr-once", children: jsx(g$1.Suspense, { fallback: null, children: jsx(Ce, { entry: e }) }) });
 }
-function Se({ entry: e }) {
-  const t = useRouter();
+function Ce({ entry: e }) {
+  const r = useRouter();
   if (e.value.status === "pending") throw e.value;
-  const r = `__TSR__.resolvePromise(${g$1(e, { isScriptContext: true, wrap: true, json: true })})`;
-  return t.injectScript(r), jsx(Fragment, {});
+  const t = `__TSR__.resolvePromise(${S$1(e, { isScriptContext: true, wrap: true, json: true })})`;
+  return r.injectScript(t), jsx(Fragment, {});
 }
-function ge({ entry: e }) {
+function Te({ entry: e }) {
   m$1(e.streamState, "StreamState should be defined");
-  const t = useRouter();
-  return jsx(k, { streamState: e.streamState, children: (r) => {
-    const n = r ? `__TSR__.matches[${e.matchIndex}].extracted[${e.id}].value.controller.enqueue(new TextEncoder().encode(${g$1(r.toString(), { isScriptContext: true, wrap: true, json: true })}))` : `__TSR__.matches[${e.matchIndex}].extracted[${e.id}].value.controller.close()`;
-    return t.injectScript(n), jsx(Fragment, {});
+  const r = useRouter();
+  return jsx(k, { streamState: e.streamState, children: (t) => {
+    const n = t ? `__TSR__.matches[${e.matchIndex}].extracted[${e.id}].value.controller.enqueue(new TextEncoder().encode(${S$1(t.toString(), { isScriptContext: true, wrap: true, json: true })}))` : `__TSR__.matches[${e.matchIndex}].extracted[${e.id}].value.controller.close()`;
+    return r.injectScript(n), jsx(Fragment, {});
   } });
 }
-function Re({ stream: e }) {
-  const t = { promises: [] }, r = e.getReader(), n = (o) => (t.promises[o] = createControlledPromise(), r.read().then(({ done: s, value: a }) => {
+function we({ stream: e }) {
+  const r = { promises: [] }, t = e.getReader(), n = (o) => (r.promises[o] = createControlledPromise(), t.read().then(({ done: s, value: a }) => {
     if (s) {
-      t.promises[o].resolve(null), r.releaseLock();
+      r.promises[o].resolve(null), t.releaseLock();
       return;
     }
-    return t.promises[o].resolve(a), n(o + 1);
+    return r.promises[o].resolve(a), n(o + 1);
   }));
   return n(0).catch((o) => {
     console.error("stream read error", o);
-  }), t;
+  }), r;
 }
-function k({ streamState: e, children: t, __index: r = 0 }) {
-  const n = e.promises[r];
+function k({ streamState: e, children: r, __index: t = 0 }) {
+  const n = e.promises[t];
   if (!n) return null;
   if (n.status === "pending") throw n;
   const o = n.value;
-  return jsxs(Fragment, { children: [t(o), jsx("div", { className: "tsr-once", children: jsx(S$1.Suspense, { fallback: null, children: jsx(k, { streamState: e, __index: r + 1, children: t }) }) })] });
+  return jsxs(Fragment, { children: [r(o), jsx("div", { className: "tsr-once", children: jsx(g$1.Suspense, { fallback: null, children: jsx(k, { streamState: e, __index: t + 1, children: r }) }) })] });
 }
-function C(e, t, r) {
-  if (t.length === 0) return r;
-  const [n, ...o] = t;
-  return Array.isArray(e) ? e.map((s, a) => a === Number(n) ? C(s, o, r) : s) : isPlainObject$1(e) ? { ...e, [n]: C(e[n], o, r) } : e;
+function E(e, r, t) {
+  if (r.length === 0) return t;
+  const [n, ...o] = r;
+  return Array.isArray(e) ? e.map((s, a) => a === Number(n) ? E(s, o, t) : s) : isPlainObject$1(e) ? { ...e, [n]: E(e[n], o, t) } : e;
 }
-function E(e) {
-  e.router.AfterEachMatch = _e, e.router.serializer = (n) => g$1(n, { isScriptContext: true, wrap: true, json: true });
-  const t = Context.get("TanStackRouterHydrationContext", {}), r = S$1.useMemo(() => {
+function M(e) {
+  e.router.AfterEachMatch = xe, e.router.serializer = (n) => S$1(n, { isScriptContext: true, wrap: true, json: true });
+  const r = Context.get("TanStackRouterHydrationContext", {}), t = g$1.useMemo(() => {
     var n, o;
     return { router: e.router.dehydrate(), payload: (o = (n = e.router.options).dehydrate) == null ? void 0 : o.call(n) };
   }, [e.router]);
-  return jsx(t.Provider, { value: r, children: jsx(RouterProvider, { router: e.router }) });
+  return jsx(r.Provider, { value: t, children: jsx(RouterProvider, { router: e.router }) });
 }
-function xe(e) {
-  let t;
-  const r = D(e), n = { duplex: "half", method: e.method, headers: e.headers };
-  return e.node.req.body instanceof ArrayBuffer ? new Request(r, { ...n, body: e.node.req.body }) : new Request(r, { ...n, get body() {
-    return t || (t = Ce(e), t);
+function be(e) {
+  let r;
+  const t = D(e), n = { duplex: "half", method: e.method, headers: e.headers };
+  return e.node.req.body instanceof ArrayBuffer ? new Request(t, { ...n, body: e.node.req.body }) : new Request(t, { ...n, get body() {
+    return r || (r = Me(e), r);
   } });
 }
-function ve(e) {
+function He(e) {
   var _a;
-  return (_a = e.web) != null ? _a : e.web = { request: xe(e), url: D(e) }, e.web.request;
+  return (_a = e.web) != null ? _a : e.web = { request: be(e), url: D(e) }, e.web.request;
 }
-function Te() {
-  return Ee();
+function Ee() {
+  return qe();
 }
-const A = Symbol("$HTTPEvent");
-function we(e) {
-  return typeof e == "object" && (e instanceof H3Event || (e == null ? void 0 : e[A]) instanceof H3Event || (e == null ? void 0 : e.__is_event__) === true);
+const W = Symbol("$HTTPEvent");
+function $e(e) {
+  return typeof e == "object" && (e instanceof H3Event || (e == null ? void 0 : e[W]) instanceof H3Event || (e == null ? void 0 : e.__is_event__) === true);
 }
 function R(e) {
-  return function(...t) {
+  return function(...r) {
     var _a;
-    let r = t[0];
-    if (we(r)) t[0] = r instanceof H3Event || r.__is_event__ ? r : r[A];
+    let t = r[0];
+    if ($e(t)) r[0] = t instanceof H3Event || t.__is_event__ ? t : t[W];
     else {
       if (!((_a = globalThis.app.config.server.experimental) == null ? void 0 : _a.asyncContext)) throw new Error("AsyncLocalStorage was not enabled. Use the `server.experimental.asyncContext: true` option in your app configuration to enable it. Or, pass the instance of HTTPEvent that you have as the first argument to the function.");
-      if (r = Te(), !r) throw new Error("No HTTPEvent found in AsyncLocalStorage. Make sure you are using the function within the server runtime.");
-      t.unshift(r);
+      if (t = Ee(), !t) throw new Error("No HTTPEvent found in AsyncLocalStorage. Make sure you are using the function within the server runtime.");
+      r.unshift(t);
     }
-    return e(...t);
+    return e(...r);
   };
 }
-const wt = R(getRequestHeaders), D = R(getRequestURL), bt = R(getResponseStatus), be = R(getResponseHeaders), Ce = R(getRequestWebStream);
-function He() {
+const qt = R(getRequestHeaders), D = R(getRequestURL), It = R(getResponseStatus), Pe = R(getResponseHeaders), Me = R(getRequestWebStream);
+function Ae() {
   var _a;
   return getContext("nitro-app", { asyncContext: !!((_a = globalThis.app.config.server.experimental) == null ? void 0 : _a.asyncContext), AsyncLocalStorage: AsyncLocalStorage });
 }
-function Ee() {
-  return He().use().event;
+function qe() {
+  return Ae().use().event;
 }
-function Me(e) {
+function Ie(e) {
   return e instanceof Headers ? new Headers(e) : Array.isArray(e) ? new Headers(e) : typeof e == "object" ? new Headers(e) : new Headers();
 }
-function M(...e) {
-  return e.reduce((t, r) => {
-    const n = Me(r);
-    for (const [o, s] of n.entries()) t.set(o, s);
-    return t;
+function A(...e) {
+  return e.reduce((r, t) => {
+    const n = Ie(t);
+    for (const [o, s] of n.entries()) r.set(o, s);
+    return r;
   }, new Headers());
 }
-function Pe({ createRouter: e, getRouterManifest: t }) {
-  return (r) => eventHandler(async (n) => {
-    const o = ve(n), s = new URL(o.url), a = s.href.replace(s.origin, ""), i = createMemoryHistory({ initialEntries: [a] }), c = e();
-    c.serializeLoaderData = he, t && (c.manifest = t()), c.update({ history: i }), await c.load();
-    const l = $e({ event: n, router: c });
-    return await r({ request: o, router: c, responseHeaders: l });
+function Le({ createRouter: e, getRouterManifest: r }) {
+  return (t) => eventHandler(async (n) => {
+    const o = He(n), s = new URL(o.url), a = s.href.replace(s.origin, ""), i = createMemoryHistory({ initialEntries: [a] }), c = e();
+    c.serializeLoaderData = Re, r && (c.manifest = r()), c.update({ history: i }), await c.load();
+    const l = ke({ event: n, router: c });
+    return await t({ request: o, router: c, responseHeaders: l });
   });
 }
-function $e(e) {
+function ke(e) {
   e.event.__tsrHeadersSent = true;
-  let t = M(be(e.event), { "Content-Type": "text/html; charset=UTF-8" }, ...e.router.state.matches.map((n) => n.headers));
-  const { redirect: r } = e.router.state;
-  return r && (t = M(t, r.headers, { Location: r.href })), t;
+  let r = A(Pe(e.event), { "Content-Type": "text/html; charset=UTF-8" }, ...e.router.state.matches.map((n) => n.headers));
+  const { redirect: t } = e.router.state;
+  return t && (r = A(r, t.headers, { Location: t.href })), r;
 }
-function qe(e) {
-  const t = W(() => e.injectedHtml.map((r) => r()).join(""));
-  return new Transform({ transform(r, n, o) {
-    t.transform(r, this.push.bind(this)).then(() => o()).catch((s) => o(s));
-  }, flush(r) {
-    t.flush(this.push.bind(this)).then(() => r()).catch((n) => r(n));
+function We(e) {
+  const r = B(() => e.injectedHtml.map((t) => t()).join(""));
+  return new Transform({ transform(t, n, o) {
+    r.transform(t, this.push.bind(this)).then(() => o()).catch((s) => o(s));
+  }, flush(t) {
+    r.flush(this.push.bind(this)).then(() => t()).catch((n) => t(n));
   } });
 }
-function Le(e) {
-  const t = W(() => e.injectedHtml.map((n) => n()).join("")), r = new TextEncoder();
+function De(e) {
+  const r = B(() => e.injectedHtml.map((n) => n()).join("")), t = new TextEncoder();
   return new TransformStream({ transform(n, o) {
-    return t.transform(n, (s) => (o.enqueue(r.encode(s)), true));
+    return r.transform(n, (s) => (o.enqueue(t.encode(s)), true));
   }, flush(n) {
-    return t.flush((o) => (n.enqueue(o), true));
+    return r.flush((o) => (n.enqueue(o), true));
   } });
 }
-const Ie = /(<body)/, ke = /(<\/body>)/, Ae = /(<\/html>)/, De = /(<\/[a-zA-Z][\w:.-]*?>)/g, We = new TextDecoder();
-function W(e) {
-  let t = false, r = "", n = "";
+const Be = /(<body)/, Fe = /(<\/body>)/, Oe = /(<\/html>)/, Ne = /(<\/[a-zA-Z][\w:.-]*?>)/g, je = new TextDecoder();
+function B(e) {
+  let r = false, t = "", n = "";
   return { async transform(o, s) {
-    const a = r + We.decode(o), i = a.match(Ie), c = a.match(ke), l = a.match(Ae);
+    const a = t + je.decode(o), i = a.match(Be), c = a.match(Fe), l = a.match(Oe);
     try {
-      if (i && (t = true), !t) {
-        s(a), r = "";
+      if (i && (r = true), !r) {
+        s(a), t = "";
         return;
       }
       const d = e();
       if (c && l && c.index < l.index) {
-        const m = c.index + c[0].length, h = l.index + l[0].length, v = a.slice(0, m) + d + a.slice(m, h) + a.slice(h);
-        s(v), r = "";
+        const m = c.index + c[0].length, f = l.index + l[0].length, T = a.slice(0, m) + d + a.slice(m, f) + a.slice(f);
+        s(T), t = "";
       } else {
-        let m, h = 0;
-        for (; (m = De.exec(a)) !== null; ) h = m.index + m[0].length;
-        if (h > 0) {
-          const v = a.slice(0, h) + d + n;
-          s(v), r = a.slice(h);
-        } else r = a, n += d;
+        let m, f = 0;
+        for (; (m = Ne.exec(a)) !== null; ) f = m.index + m[0].length;
+        if (f > 0) {
+          const T = a.slice(0, f) + d + n;
+          s(T), t = a.slice(f);
+        } else t = a, n += d;
       }
     } catch (d) {
       throw console.error("Error transforming HTML:", d), d;
     }
   }, async flush(o) {
-    r && o(r);
+    t && o(t);
   } };
 }
-const Be = async ({ request: e, router: t, responseHeaders: r }) => {
+const ze = async ({ request: e, router: r, responseHeaders: t }) => {
   if (typeof x$1.renderToReadableStream == "function") {
-    const n = await x$1.renderToReadableStream(jsx(E, { router: t }), { signal: e.signal });
+    const n = await x$1.renderToReadableStream(jsx(M, { router: r }), { signal: e.signal });
     isbot(e.headers.get("User-Agent")) && await n.allReady;
-    const s = [Le(t)].reduce((a, i) => a.pipeThrough(i), n);
-    return new Response(s, { status: t.state.statusCode, headers: r });
+    const s = [De(r)].reduce((a, i) => a.pipeThrough(i), n);
+    return new Response(s, { status: r.state.statusCode, headers: t });
   }
   if (typeof x$1.renderToPipeableStream == "function") {
-    const n = new PassThrough(), o = x$1.renderToPipeableStream(jsx(E, { router: t }), { ...isbot(e.headers.get("User-Agent")) ? { onAllReady() {
+    const n = new PassThrough(), o = x$1.renderToPipeableStream(jsx(M, { router: r }), { ...isbot(e.headers.get("User-Agent")) ? { onAllReady() {
       o.pipe(n);
     } } : { onShellReady() {
       o.pipe(n);
     } }, onError: (i, c) => {
       console.log("Error in renderToPipeableStream:", i, c);
-    } }), a = [qe(t)].reduce((i, c) => i.pipe(c), n);
-    return new Response(a, { status: t.state.statusCode, headers: r });
+    } }), a = [We(r)].reduce((i, c) => i.pipe(c), n);
+    return new Response(a, { status: r.state.statusCode, headers: t });
   }
   throw new Error("No renderToReadableStream or renderToPipeableStream found in react-dom/server. Ensure you are using a version of react-dom that supports streaming.");
-}, Fe = () => ({ routes: { __root__: { filePath: "__root.tsx", children: ["/_layout"], preloads: ["\\_build\\assets\\client-D_FFMy6y.js", "\\_build\\assets\\client-ChOrW0Tx.js"] }, "/_layout": { filePath: "_layout.tsx", children: ["/_layout/"] }, "/_layout/": { filePath: "_layout/index.tsx", parent: "/_layout" } } });
-function Oe(e) {
+}, Ue = () => ({ routes: { __root__: { filePath: "__root.tsx", children: ["/_auth", "/_layout"], preloads: ["\\_build\\assets\\client-DvC0pycv.js", "\\_build\\assets\\client-BjkTD0X7.js"] }, "/_auth": { filePath: "_auth.tsx", children: ["/_auth/signin"] }, "/_layout": { filePath: "_layout.tsx", children: ["/_layout/"] }, "/_auth/signin": { filePath: "_auth/signin.tsx", parent: "/_auth" }, "/_layout/": { filePath: "_layout/index.tsx", parent: "/_layout" } } });
+function Qe(e) {
   return globalThis.MANIFEST[e];
 }
-function Ne() {
+function Je() {
   var _a;
-  const e = Fe(), t = e.routes.__root__ = e.routes.__root__ || {};
-  t.assets = t.assets || [];
-  const r = Oe("client");
-  return t.assets.push({ tag: "script", attrs: { src: (_a = r.inputs[r.handler]) == null ? void 0 : _a.output.path, type: "module", async: true, suppressHydrationWarning: true } }), e;
+  const e = Ue(), r = e.routes.__root__ = e.routes.__root__ || {};
+  r.assets = r.assets || [];
+  const t = Qe("client");
+  return r.assets.push({ tag: "script", attrs: { src: (_a = t.inputs[t.handler]) == null ? void 0 : _a.output.path, type: "module", async: true, suppressHydrationWarning: true } }), e;
 }
-function je() {
-  const e = Ne();
-  return { ...e, routes: Object.fromEntries(Object.entries(e.routes).map(([t, r]) => {
-    const { preloads: n, assets: o } = r;
-    return [t, { preloads: n, assets: o }];
+function Ve() {
+  const e = Je();
+  return { ...e, routes: Object.fromEntries(Object.entries(e.routes).map(([r, t]) => {
+    const { preloads: n, assets: o } = t;
+    return [r, { preloads: n, assets: o }];
   })) };
 }
-function B({ tag: e, attrs: t, children: r }) {
+function F({ tag: e, attrs: r, children: t }) {
   switch (e) {
     case "title":
-      return jsx("title", { ...t, suppressHydrationWarning: true, children: r });
+      return jsx("title", { ...r, suppressHydrationWarning: true, children: t });
     case "meta":
-      return jsx("meta", { ...t, suppressHydrationWarning: true });
+      return jsx("meta", { ...r, suppressHydrationWarning: true });
     case "link":
-      return jsx("link", { ...t, suppressHydrationWarning: true });
+      return jsx("link", { ...r, suppressHydrationWarning: true });
     case "style":
-      return jsx("style", { ...t, dangerouslySetInnerHTML: { __html: r } });
+      return jsx("style", { ...r, dangerouslySetInnerHTML: { __html: t } });
     case "script":
-      return t && t.src ? jsx("script", { ...t, suppressHydrationWarning: true }) : typeof r == "string" ? jsx("script", { ...t, dangerouslySetInnerHTML: { __html: r }, suppressHydrationWarning: true }) : null;
+      return r && r.src ? jsx("script", { ...r, suppressHydrationWarning: true }) : typeof t == "string" ? jsx("script", { ...r, dangerouslySetInnerHTML: { __html: t }, suppressHydrationWarning: true }) : null;
     default:
       return null;
   }
 }
-const ze = () => {
-  const e = useRouter(), t = useRouterState({ select: (s) => s.matches.map((a) => a.meta).filter(Boolean) }), r = S$1.useMemo(() => {
+const Ge = () => {
+  const e = useRouter(), r = useRouterState({ select: (s) => s.matches.map((a) => a.meta).filter(Boolean) }), t = g$1.useMemo(() => {
     const s = [], a = {};
     let i;
-    return [...t].reverse().forEach((c) => {
+    return [...r].reverse().forEach((c) => {
       [...c].reverse().forEach((l) => {
         if (l.title) i || (i = { tag: "title", children: l.title });
         else {
@@ -4985,7 +4985,7 @@ const ze = () => {
         }
       });
     }), i && s.push(i), s.reverse(), s;
-  }, [t]), n = useRouterState({ select: (s) => s.matches.map((a) => a.links).filter(Boolean).flat(1).map((a) => ({ tag: "link", attrs: { ...a } })), structuralSharing: true }), o = useRouterState({ select: (s) => {
+  }, [r]), n = useRouterState({ select: (s) => s.matches.map((a) => a.links).filter(Boolean).flat(1).map((a) => ({ tag: "link", attrs: { ...a } })), structuralSharing: true }), o = useRouterState({ select: (s) => {
     const a = [];
     return s.matches.map((i) => e.looseRoutesById[i.routeId]).forEach((i) => {
       var c, l, d;
@@ -4994,20 +4994,20 @@ const ze = () => {
       });
     }), a;
   }, structuralSharing: true });
-  return Je([...r, ...o, ...n], (s) => JSON.stringify(s));
-}, Ue = () => {
-  const e = useRouter(), t = ze(), r = S$1.useContext(Context.get("TanStackRouterHydrationContext", {}));
-  return jsxs(Fragment, { children: [t.map((n, o) => createElement(B, { ...n, key: `tsr-meta-${JSON.stringify(n)}` })), jsxs(Fragment, { children: [jsx(ScriptOnce, { log: false, children: '__TSR__={matches:[],streamedValues:{},queue:[],runQueue:()=>{let e=!1;__TSR__.queue=__TSR__.queue.filter((_=>!_()||(e=!0,!1))),e&&__TSR__.runQueue()},initMatch:e=>{__TSR__.queue.push((()=>(__TSR__.matches[e.index]||(__TSR__.matches[e.index]=e,Object.entries(e.extracted).forEach((([e,_])=>{if("stream"===_.type){let e;_.value=new ReadableStream({start(_){e=_}}),_.value.controller=e}else if("promise"===_.type){let e,t;_.value=new Promise(((_,u)=>{e=_,t=u})),_.resolve=e,_.reject=t}}))),!0))),__TSR__.runQueue()},resolvePromise:e=>{__TSR__.queue.push((()=>{const _=__TSR__.matches[e.matchIndex];if(_){const t=_.extracted[e.id];if(t)return t.resolve(e.value.data),!0}return!1})),__TSR__.runQueue()},cleanScripts:()=>{document.querySelectorAll(".tsr-once").forEach((e=>{e.remove()}))}};' }), jsx(ScriptOnce, { children: `__TSR__.dehydrated = ${g$1(e.options.transformer.stringify(r), { isScriptContext: true, wrap: true, json: true })}` })] })] });
-}, Qe = () => jsx(Fragment, { children: Ue() });
-function Je(e, t) {
-  const r = /* @__PURE__ */ new Set();
+  return Ke([...t, ...o, ...n], (s) => JSON.stringify(s));
+}, Xe = () => {
+  const e = useRouter(), r = Ge(), t = g$1.useContext(Context.get("TanStackRouterHydrationContext", {}));
+  return jsxs(Fragment, { children: [r.map((n, o) => createElement(F, { ...n, key: `tsr-meta-${JSON.stringify(n)}` })), jsxs(Fragment, { children: [jsx(ScriptOnce, { log: false, children: '__TSR__={matches:[],streamedValues:{},queue:[],runQueue:()=>{let e=!1;__TSR__.queue=__TSR__.queue.filter((_=>!_()||(e=!0,!1))),e&&__TSR__.runQueue()},initMatch:e=>{__TSR__.queue.push((()=>(__TSR__.matches[e.index]||(__TSR__.matches[e.index]=e,Object.entries(e.extracted).forEach((([e,_])=>{if("stream"===_.type){let e;_.value=new ReadableStream({start(_){e=_}}),_.value.controller=e}else if("promise"===_.type){let e,t;_.value=new Promise(((_,u)=>{e=_,t=u})),_.resolve=e,_.reject=t}}))),!0))),__TSR__.runQueue()},resolvePromise:e=>{__TSR__.queue.push((()=>{const _=__TSR__.matches[e.matchIndex];if(_){const t=_.extracted[e.id];if(t)return t.resolve(e.value.data),!0}return!1})),__TSR__.runQueue()},cleanScripts:()=>{document.querySelectorAll(".tsr-once").forEach((e=>{e.remove()}))}};' }), jsx(ScriptOnce, { children: `__TSR__.dehydrated = ${S$1(e.options.transformer.stringify(t), { isScriptContext: true, wrap: true, json: true })}` })] })] });
+}, Ze = () => jsx(Fragment, { children: Xe() });
+function Ke(e, r) {
+  const t = /* @__PURE__ */ new Set();
   return e.filter((n) => {
-    const o = t(n);
-    return r.has(o) ? false : (r.add(o), true);
+    const o = r(n);
+    return t.has(o) ? false : (t.add(o), true);
   });
 }
-const Ve = () => {
-  const e = useRouter(), t = useRouterState({ select: (o) => {
+const Ye = () => {
+  const e = useRouter(), r = useRouterState({ select: (o) => {
     const s = [];
     return o.matches.map((a) => e.looseRoutesById[a.routeId]).forEach((a) => {
       var i, c, l;
@@ -5015,28 +5015,29 @@ const Ve = () => {
         s.push({ tag: "script", attrs: d.attrs, children: d.children });
       });
     }), s;
-  }, structuralSharing: true }), { scripts: r } = useRouterState({ select: (o) => ({ scripts: o.matches.map((s) => s.scripts).filter(Boolean).flat(1).map(({ children: s, ...a }) => ({ tag: "script", attrs: { ...a, suppressHydrationWarning: true }, children: s })) }) }), n = [...r, ...t];
-  return jsx(Fragment, { children: n.map((o, s) => createElement(B, { ...o, key: `tsr-scripts-${o.tag}-${s}` })) });
-}, Ge = createContext$1({ appData: { dashboard: { pathname: "" } } }), Ze = ({ children: e }) => {
-  const t = window.location.pathname;
-  return jsx(Ge.Provider, { value: { appData: { dashboard: { pathname: t } } }, children: e });
-}, Ke = "/_build/assets/app-BT3BuD0z.css", F = createRootRouteWithContext()({ context: () => Ze, head: () => ({ meta: [{ charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: "TanStarter" }] }), component: Xe });
-function Xe() {
-  return jsx(Ye, { children: jsx(Outlet, {}) });
+  }, structuralSharing: true }), { scripts: t } = useRouterState({ select: (o) => ({ scripts: o.matches.map((s) => s.scripts).filter(Boolean).flat(1).map(({ children: s, ...a }) => ({ tag: "script", attrs: { ...a, suppressHydrationWarning: true }, children: s })) }) }), n = [...t, ...r];
+  return jsx(Fragment, { children: n.map((o, s) => createElement(F, { ...o, key: `tsr-scripts-${o.tag}-${s}` })) });
+}, et = "/_build/assets/app-Dg24SOIr.css", tt = createContext$1({ counter: 0, setCounter: () => {
+} }), O = ({ children: e }) => {
+  const [r, t] = useState(0);
+  return jsx(tt.Provider, { value: { counter: r, setCounter: t }, children: e });
+}, $ = createRootRouteWithContext()({ context: () => O, head: () => ({ meta: [{ charSet: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { title: "Esigns" }] }), component: rt });
+function rt() {
+  return jsx(O, { children: jsx(nt, { children: jsx(Outlet, {}) }) });
 }
-function Ye({ children: e }) {
-  return jsxs("html", { children: [jsxs("head", { children: [jsx(Qe, {}), jsx("link", { rel: "stylesheet", href: Ke })] }), jsxs("body", { children: [e, jsx(ScrollRestoration, {}), jsx(Ve, {})] })] });
+function nt({ children: e }) {
+  return jsxs("html", { children: [jsxs("head", { children: [jsx(Ze, {}), jsx("link", { rel: "stylesheet", href: et })] }), jsxs("body", { children: [e, jsx(ScrollRestoration, {}), jsx(Ye, {})] })] });
 }
-const et = () => import('../build/_layout-C2Z6N0Kw.mjs'), O = createFileRoute("/_layout")({ component: lazyRouteComponent(et, "component", () => O.ssr) }), tt = () => import('../build/index-xf7AXn-T.mjs'), rt = () => import('../build/index-xf7AXn-T.mjs'), N = createFileRoute("/_layout/")({ component: lazyRouteComponent(rt, "component", () => N.ssr), loader: lazyFn(tt, "loader") }), j = O.update({ id: "/_layout", getParentRoute: () => F }), nt = N.update({ id: "/", path: "/", getParentRoute: () => j }), ot = { LayoutIndexRoute: nt }, st = j._addFileChildren(ot), at = { LayoutRoute: st }, it = F._addFileChildren(at)._addFileTypes(), ut = () => jsxs("div", { children: [jsx("h1", { children: "404" }), jsx("p", { children: "Not Found" })] });
-function ct() {
+const ot = () => import('../build/_layout-C2Z6N0Kw.mjs'), N = createFileRoute("/_layout")({ component: lazyRouteComponent(ot, "component", () => N.ssr) }), st = () => import('../build/_auth-dY-acKrN.mjs'), j = createFileRoute("/_auth")({ component: lazyRouteComponent(st, "component", () => j.ssr) }), at = () => import('../build/index-Blt7xCCf.mjs'), it = () => import('../build/index-Blt7xCCf.mjs'), z = createFileRoute("/_layout/")({ component: lazyRouteComponent(it, "component", () => z.ssr), loader: lazyFn(at, "loader") }), ut = () => import('../build/signin-u_si_y9n.mjs'), U = createFileRoute("/_auth/signin")({ component: lazyRouteComponent(ut, "component", () => U.ssr) }), Q = N.update({ id: "/_layout", getParentRoute: () => $ }), J = j.update({ id: "/_auth", getParentRoute: () => $ }), ct = z.update({ id: "/", path: "/", getParentRoute: () => Q }), lt = U.update({ id: "/signin", path: "/signin", getParentRoute: () => J }), dt = { AuthSigninRoute: lt }, mt = J._addFileChildren(dt), ht = { LayoutIndexRoute: ct }, pt = Q._addFileChildren(ht), ft = { AuthRoute: mt, LayoutRoute: pt }, _t = $._addFileChildren(ft)._addFileTypes(), yt = () => jsxs("div", { children: [jsx("h1", { children: "404" }), jsx("p", { children: "Not Found" })] });
+function gt() {
   const e = new QueryClient();
-  return routerWithQueryClient(createRouter$2({ routeTree: it, context: { queryClient: e }, defaultPreload: "intent", defaultNotFoundComponent: ut }), e);
+  return routerWithQueryClient(createRouter$2({ routeTree: _t, context: { queryClient: e }, defaultPreload: "intent", defaultNotFoundComponent: yt }), e);
 }
-const Ct = Pe({ createRouter: ct, getRouterManifest: je })(Be);
+const Lt = Le({ createRouter: gt, getRouterManifest: Ve })(ze);
 
 const handlers = [
   { route: '/_server', handler: G, lazy: false, middleware: true, method: undefined },
-  { route: '/', handler: Ct, lazy: false, middleware: true, method: undefined }
+  { route: '/', handler: Lt, lazy: false, middleware: true, method: undefined }
 ];
 
 function wrapToPromise(value) {
@@ -6514,5 +6515,5 @@ function useNitroApp() {
 }
 runNitroPlugins(nitroApp);
 
-export { Ee as E, M, N, Oe as O, bt as b, eventHandler as e, parseQuery as p, toNodeListener as t, useNitroApp as u, ve as v, wt as w };
+export { A, He as H, It as I, Qe as Q, qt as a, tt as b, eventHandler as e, parseQuery as p, qe as q, toNodeListener as t, useNitroApp as u, z };
 //# sourceMappingURL=nitro.mjs.map

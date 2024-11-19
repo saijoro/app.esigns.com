@@ -1,4 +1,3 @@
-// app/routes/__root.tsx
 import {
   Outlet,
   ScrollRestoration,
@@ -8,9 +7,24 @@ import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
 import { createAppContext } from "../context/appContext";
 import { MyRouterContext } from "../lib/interfaces/contextInterface";
+import appCss from "./styles/app.css?url";
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
   context: () => createAppContext,
+  head: () => ({
+    meta: [
+      {
+        charSet: "utf-8",
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
+      },
+      {
+        title: "TanStarter",
+      },
+    ],
+  }),
   component: RootComponent,
 });
 
@@ -27,6 +41,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     <html>
       <head>
         <Meta />
+        <link rel="stylesheet" href={appCss as string} />
       </head>
       <body>
         {children}

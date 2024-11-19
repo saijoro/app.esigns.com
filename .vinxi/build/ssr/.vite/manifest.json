@@ -1,0 +1,42 @@
+{
+  "C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css": {
+    "file": "assets/app-BT3BuD0z.css",
+    "src": "C:/Users/Prasanth/Documents/Orotron/app.esigns.com/app/routes/styles/app.css"
+  },
+  "_ssr-AfLqi4nv.js": {
+    "file": "assets/ssr-AfLqi4nv.js",
+    "name": "ssr",
+    "dynamicImports": [
+      "app/routes/_layout.tsx?tsr-split",
+      "app/routes/_layout/index.tsx?tsr-split",
+      "app/routes/_layout/index.tsx?tsr-split"
+    ],
+    "assets": [
+      "assets/app-BT3BuD0z.css"
+    ]
+  },
+  "app/routes/_layout.tsx?tsr-split": {
+    "file": "assets/_layout-C2Z6N0Kw.js",
+    "name": "_layout",
+    "src": "app/routes/_layout.tsx?tsr-split",
+    "isDynamicEntry": true
+  },
+  "app/routes/_layout/index.tsx?tsr-split": {
+    "file": "assets/index-xf7AXn-T.js",
+    "name": "index",
+    "src": "app/routes/_layout/index.tsx?tsr-split",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ssr-AfLqi4nv.js"
+    ]
+  },
+  "virtual:$vinxi/handler/ssr": {
+    "file": "ssr.js",
+    "name": "ssr",
+    "src": "virtual:$vinxi/handler/ssr",
+    "isEntry": true,
+    "imports": [
+      "_ssr-AfLqi4nv.js"
+    ]
+  }
+}

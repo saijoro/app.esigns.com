@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useState } from "react";
-import { AppContextType } from "../lib/interfaces/contextInterface";
+import { iContext } from "../lib/interfaces/iContext";
 
-export const AppContext = createContext<AppContextType>({
+export const AppContext = createContext<iContext>({
   counter: 0,
   setCounter: () => {}, // Default value, won't be used in real scenarios
 });

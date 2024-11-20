@@ -205,7 +205,7 @@ const RootLayout = () => {
             </li>
           </ul>
         </aside>
-        <div className="bg-white w-[calc(100%-100px)] rounded-lg">
+        <div className="bg-white w-[calc(100%-100px)] rounded-lg overflow-hidden">
           <Outlet />
         </div>
       </div>

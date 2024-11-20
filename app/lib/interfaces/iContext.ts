@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 
-export interface AppContextType {
+export interface iContext {
   counter: number;
   setCounter: Dispatch<SetStateAction<number>>;
 }

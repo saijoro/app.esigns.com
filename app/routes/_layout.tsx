@@ -1,18 +1,6 @@
-import { createFileRoute, Outlet } from "@tanstack/react-router";
-import { useContext } from "react";
-import { AppContext } from "../context/appContext";
-import { AppContextType } from "../lib/interfaces/contextInterface";
+import { createFileRoute } from "@tanstack/react-router";
+import RootLayout from "~/components/layout/RootLayout";
 
 export const Route = createFileRoute("/_layout")({
-  component: RouteComponent,
+  component: RootLayout,
 });
-
-function RouteComponent() {
-  const { counter } = useContext(AppContext) as AppContextType;
-
-  return (
-    <div>
-      <Outlet />
-    </div>
-  );
-}

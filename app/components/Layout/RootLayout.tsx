@@ -276,7 +276,7 @@ function CustomSidebar({ isSidebarOpen }: { isSidebarOpen: boolean }) {
       </div>
       <div
         className={
-          `bg-white rounded-lg overflow-hidden ` +
+          `bg-white rounded-lg overflow-x-hidden ` +
           (isSidebarOpen ? "w-[90%]" : "w-[calc(100%-90px)]")
         }
       >

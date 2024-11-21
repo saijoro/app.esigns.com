@@ -3,11 +3,12 @@ import { Input } from "@/components/ui/input";
 import { useMutation } from "@tanstack/react-query";
 import { useNavigate, useRouter } from "@tanstack/react-router";
 import Cookies from "js-cookie";
-import { loginAPI } from "~/utils/services/auth";
-import { useForm, Controller } from "react-hook-form";
-import { Eye, EyeOff, Loader2, LockKeyhole, Mail } from "lucide-react";
+import { Eye, EyeOff, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { ILoginDetails } from "~/lib/interfaces/auth/iAuth";
+import { loginAPI } from "~/utils/services/auth";
 
 const SignIn: React.FC = () => {
   const navigate = useNavigate({ from: "/" });
@@ -28,6 +29,7 @@ const SignIn: React.FC = () => {
         setLoading(true);
         const response = await loginAPI(loginDetails);
         if (response?.status === 200 || response?.status === 201) {
+          toast.success(response?.data?.message);
           const { data } = response?.data;
           const expiryDate = new Date(data?.access_token_expires_at);
           Cookies.set("token", data.access_token, {
@@ -66,6 +68,7 @@ const SignIn: React.FC = () => {
             });
           }
         } else {
+          toast.success(response?.data?.message);
           throw response;
         }
       } catch (errData) {

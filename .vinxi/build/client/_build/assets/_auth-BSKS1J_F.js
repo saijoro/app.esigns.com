@@ -1,0 +1,1 @@
+import{j as t,O as n}from"./client-B215WYeU.js";const o=()=>t.jsx("div",{className:"bg-[#fbf7ec]",children:t.jsx(n,{})}),r=function(){return t.jsx("div",{children:t.jsx(o,{})})};export{r as component};

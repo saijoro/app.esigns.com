@@ -34,7 +34,6 @@ const SignIn: React.FC = () => {
           toast.success(response?.data?.message);
           const { data } = response;
           const expiryDate = new Date(data?.access_token_expires_at);
-
           Cookies.set("token", data.access_token, {
             priority: "High",
             expires: expiryDate,

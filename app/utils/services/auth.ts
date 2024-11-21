@@ -30,3 +30,14 @@ export const checkEmailAPI = async (email: string) => {
     throw err;
   }
 };
+export const verifyEmailWithOTPAPI = async (body: {
+  email: string;
+  verification_code: string;
+}) => {
+  try {
+    const response = await $fetch.post(`/email/verify`, body);
+    return response;
+  } catch (err) {
+    throw err;
+  }
+};

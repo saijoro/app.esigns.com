@@ -54,7 +54,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({
           <Controller
             name="email"
             control={control}
-            rules={{ required: "Email is required" }}
+            rules={{ required: "Email is required", pattern: /^\S+@\S+\.\S+$/ }}
             render={({ field }) => (
               <div className="w-full">
                 <Input

@@ -141,7 +141,10 @@ const PasswordInfo = ({
                     type="password"
                     placeholder="Enter your password"
                     className="h-12 px-4 py-3.5 bg-white border border-black/30"
-                    onChange={handlePasswordChange}
+                    onChange={(e) => {
+                      field.onChange(e);
+                      handlePasswordChange(e);
+                    }}
                   />
                   {errors.password && (
                     <div className="text-red-500 text-sm mt-1 capitalize">
@@ -168,7 +171,10 @@ const PasswordInfo = ({
                     type="password"
                     placeholder="Confirm your password"
                     className="h-12 px-4 py-3.5 bg-white border border-black/30"
-                    onChange={handleConfirmPasswordChange}
+                    onChange={(e) => {
+                      field.onChange(e);
+                      handleConfirmPasswordChange(e);
+                    }}
                   />
                   {errors.cPassword && (
                     <div className="text-red-500 text-sm mt-1 capitalize">

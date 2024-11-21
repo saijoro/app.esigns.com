@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useMutation } from "@tanstack/react-query";
 import { useLocation, useNavigate, useRouter } from "@tanstack/react-router";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { verifyEmailWithOTPAPI } from "~/utils/services/auth";
 
 const EmailVerfication = () => {
   const navigate = useNavigate({ from: "/" });
@@ -20,9 +22,68 @@ const EmailVerfication = () => {
     handleSubmit,
     setError,
     formState: { errors },
+    trigger,
   } = useForm({});
 
-  const onSubmit = (data: any) => {};
+  const { mutate, isError, error } = useMutation({
+    mutationFn: async (verifactionDetails: {
+      email: string;
+      verification_code: string;
+    }) => {
+      try {
+        setLoading(true);
+        const response = await verifyEmailWithOTPAPI(verifactionDetails);
+        if (response?.status === 200 || response?.status === 201) {
+          router.navigate({
+            to: "/",
+          });
+        } else if (response?.status === 422) {
+          const errData = response?.data?.errors?.details;
+          if (errData) {
+            errData.forEach((error: any) => {
+              if (error.type === "any.empty" || error.type === "any.required") {
+                setError(error.key, {
+                  type: error.type,
+                  message: error.message,
+                });
+              }
+            });
+          }
+        } else if (response?.status == 404) {
+          const isNotFound = response?.data?.message;
+          if (isNotFound) {
+            setError("email", {
+              type: "manual",
+              message: isNotFound,
+            });
+          }
+        } else if (response?.status == 403) {
+          const isInvalid = response?.data?.message;
+          if (isInvalid) {
+            setError("password", {
+              type: "manual",
+              message: isInvalid,
+            });
+          }
+        } else {
+          throw response;
+        }
+      } catch (errData) {
+        console.error(errData);
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
+
+  const onSubmit = async (data: any) => {
+    const isValid = await trigger();
+
+    if (isValid) {
+      let verifactionDetails = { ...data, email };
+      mutate(verifactionDetails);
+    }
+  };
 
   return (
     <div className="flex justify-center items-center h-full">
@@ -50,6 +111,7 @@ const EmailVerfication = () => {
                   </div>
                   <Controller
                     name="email"
+                    rules={{ required: "Email is required" }}
                     control={control}
                     disabled
                     defaultValue={email}
@@ -77,8 +139,9 @@ const EmailVerfication = () => {
                   </div>
                   <div className="self-stretch h-[81px] flex-col justify-start items-start gap-3 flex">
                     <Controller
-                      name="password"
+                      name="verification_code"
                       control={control}
+                      rules={{ required: "Verification code is required" }}
                       render={({ field }) => (
                         <div className="w-full relative">
                           <Input
@@ -88,9 +151,9 @@ const EmailVerfication = () => {
                             className="h-12 px-4 py-3.5 bg-white rounded-lg border border-black/30 w-full"
                           />
 
-                          {errors.password && (
+                          {errors.verification_code && (
                             <div className="text-red-500 text-sm mt-1 capitalize">
-                              {errors?.password?.message as string}
+                              {errors?.verification_code?.message as string}
                             </div>
                           )}
                         </div>

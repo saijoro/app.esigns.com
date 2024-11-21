@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Eye, EyeOff } from "lucide-react";
 
 const PasswordInfo = ({
   control,
@@ -18,6 +19,13 @@ const PasswordInfo = ({
     useState<string>("individual");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [passwordVisible, setPasswordVisible] = useState<{
+    password: boolean;
+    confirmPassword: boolean;
+  }>({
+    password: false,
+    confirmPassword: false,
+  });
   const [validations, setValidations] = useState({
     uppercase: false,
     lowercase: false,
@@ -57,6 +65,14 @@ const PasswordInfo = ({
     setValidations((prevValidations) => ({
       ...prevValidations,
       passwordMatch: password === newConfirmPassword,
+    }));
+  };
+
+  const togglePasswordVisibility = (value: string): void => {
+    console.log(value);
+    setPasswordVisible((prevState: any) => ({
+      ...prevState,
+      [value]: !prevState[value],
     }));
   };
 
@@ -135,10 +151,10 @@ const PasswordInfo = ({
               control={control}
               rules={{ required: "Password is required" }}
               render={({ field }) => (
-                <div className="w-full">
+                <div className="w-full relative">
                   <Input
                     {...field}
-                    type="password"
+                    type={passwordVisible.password ? "text" : "password"}
                     placeholder="Enter your password"
                     className="h-12 px-4 py-3.5 bg-white border border-black/30"
                     onChange={(e) => {
@@ -146,6 +162,13 @@ const PasswordInfo = ({
                       handlePasswordChange(e);
                     }}
                   />
+                  <button
+                    type="button"
+                    onClick={() => togglePasswordVisibility("password")}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-800"
+                  >
+                    {passwordVisible.password ? <Eye /> : <EyeOff />}
+                  </button>
                   {errors.password && (
                     <div className="text-red-500 text-sm mt-1 capitalize">
                       {errors?.password?.message as string}
@@ -165,10 +188,12 @@ const PasswordInfo = ({
               control={control}
               rules={{ required: "Confirm password is required" }}
               render={({ field }) => (
-                <div className="w-full">
+                <div className="w-full relative">
                   <Input
                     {...field}
-                    type="password"
+                    type={
+                      passwordVisible?.confirmPassword ? "text" : "password"
+                    }
                     placeholder="Confirm your password"
                     className="h-12 px-4 py-3.5 bg-white border border-black/30"
                     onChange={(e) => {
@@ -176,6 +201,13 @@ const PasswordInfo = ({
                       handleConfirmPasswordChange(e);
                     }}
                   />
+                  <button
+                    type="button"
+                    onClick={() => togglePasswordVisibility("confirmPassword")}
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-800"
+                  >
+                    {passwordVisible?.confirmPassword ? <Eye /> : <EyeOff />}
+                  </button>
                   {errors.cPassword && (
                     <div className="text-red-500 text-sm mt-1 capitalize">
                       {errors?.cPassword?.message as string}

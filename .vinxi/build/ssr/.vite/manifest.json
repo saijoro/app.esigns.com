@@ -32,8 +32,8 @@
       "_input-BNpTjTIy.js"
     ]
   },
-  "_ssr-vVXvNHOZ.js": {
-    "file": "assets/ssr-vVXvNHOZ.js",
+  "_ssr-DB_nxKN-.js": {
+    "file": "assets/ssr-DB_nxKN-.js",
     "name": "ssr",
     "dynamicImports": [
       "app/routes/_layout.tsx?tsr-split",
@@ -93,7 +93,7 @@
     ]
   },
   "app/routes/_layout.tsx?tsr-split": {
-    "file": "assets/_layout-54TxV4yg.js",
+    "file": "assets/_layout-BKiV2jqM.js",
     "name": "_layout",
     "src": "app/routes/_layout.tsx?tsr-split",
     "isDynamicEntry": true,
@@ -101,7 +101,7 @@
       "_input-BNpTjTIy.js",
       "_select-2qGakAU5.js",
       "_button-cyuXPM3g.js",
-      "_ssr-vVXvNHOZ.js"
+      "_ssr-DB_nxKN-.js"
     ]
   },
   "app/routes/_layout/_sub-layout.tsx?tsr-split": {
@@ -146,7 +146,7 @@
     "src": "virtual:$vinxi/handler/ssr",
     "isEntry": true,
     "imports": [
-      "_ssr-vVXvNHOZ.js"
+      "_ssr-DB_nxKN-.js"
     ]
   }
 }

@@ -22,4 +22,5 @@ import 'react-dom/server';
 import '@tanstack/react-cross-context';
 import '@tanstack/react-query';
 import '@tanstack/react-router-with-query';
+import 'sonner';
 //# sourceMappingURL=index.mjs.map

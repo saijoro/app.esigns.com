@@ -1,4 +1,4 @@
-import { n as node$1 } from '../nitro/nitro.mjs';
+import { n as node$1 } from '../nitro/vercel.mjs';
 
 var toFormData_1;
 var y=Object.defineProperty;var c=(R,o)=>y(R,"name",{value:o,configurable:!0});const node=node$1;let s=0;const S={START_BOUNDARY:s++,HEADER_FIELD_START:s++,HEADER_FIELD:s++,HEADER_VALUE_START:s++,HEADER_VALUE:s++,HEADER_VALUE_ALMOST_DONE:s++,HEADERS_ALMOST_DONE:s++,PART_DATA_START:s++,PART_DATA:s++,END:s++};let f=1;const F={PART_BOUNDARY:f,LAST_BOUNDARY:f*=2},LF=10,CR=13,SPACE=32,HYPHEN=45,COLON=58,A=97,Z=122,lower=c(R=>R|32,"lower"),noop=c(()=>{},"noop"),g=class g{constructor(o){this.index=0,this.flags=0,this.onHeaderEnd=noop,this.onHeaderField=noop,this.onHeadersEnd=noop,this.onHeaderValue=noop,this.onPartBegin=noop,this.onPartData=noop,this.onPartEnd=noop,this.boundaryChars={},o=`\r

@@ -1,4 +1,5 @@
-import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};export { l as default } from './chunks/nitro/nitro.mjs';
+import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};export { l as default } from './chunks/nitro/vercel.mjs';
+import './chunks/_/nitro.mjs';
 import 'node:http';
 import 'node:https';
 import 'node:zlib';
@@ -22,4 +23,5 @@ import 'react-dom/server';
 import '@tanstack/react-cross-context';
 import '@tanstack/react-query';
 import '@tanstack/react-router-with-query';
+import 'sonner';
 //# sourceMappingURL=index.mjs.map

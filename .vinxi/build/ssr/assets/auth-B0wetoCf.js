@@ -1,1 +1,0 @@
-import{$ as t}from"./fetch-DqQ3Y-nf.js";const n=async r=>{try{return await t.post("/signin",r)}catch(s){throw s}},o=async r=>{try{return await t.post("/companySignup",r)}catch(s){throw s}},c=async r=>{try{return await t.get(`/checkUser/${r}`)}catch(s){throw s}},a=async r=>{try{return await t.post("/email/verify",r)}catch(s){throw s}};export{c,n as l,o as s,a as v};

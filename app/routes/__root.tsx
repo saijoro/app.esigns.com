@@ -8,6 +8,7 @@ import type { ReactNode } from "react";
 import appCss from "./styles/app.css?url";
 import { CreateAppContext } from "~/context/appContext";
 import { Toaster } from "sonner";
+import { Providers } from "~/redux/Provider";
 
 export const Route = createRootRouteWithContext()({
   context: () => CreateAppContext,
@@ -30,14 +31,12 @@ export const Route = createRootRouteWithContext()({
 
 function RootComponent() {
   return (
-    <>
-      <CreateAppContext>
-        <RootDocument>
-          <Outlet />
-          <Toaster richColors closeButton position="top-right" />
-        </RootDocument>
-      </CreateAppContext>
-    </>
+    <CreateAppContext>
+      <RootDocument>
+        <Outlet />
+        <Toaster richColors closeButton position="top-right" />
+      </RootDocument>
+    </CreateAppContext>
   );
 }
 

@@ -1,4 +1,3 @@
-"use client";
 import { useDropzone, FileRejection } from "react-dropzone";
 
 const CreateDocument = () => {

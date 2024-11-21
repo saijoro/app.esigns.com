@@ -4,12 +4,18 @@ import { Link, Outlet } from "@tanstack/react-router";
 const CreateDocLayout = () => {
   return (
     <div className="w-full">
-      <div className="bg-[#fff9ed]">
-        <div className="w-full max-w-3xl mx-auto h-12">
+      <div className="bg-[#fff9ed] flex items-center">
+        <div className="w-full mx-auto">
           <Stepper
-            totalSteps={3}
-            currentStep={2}
-            steps={["Create a Document", "Add Recipients", "Review Content"]}
+            totalSteps={5}
+            currentStep={1}
+            steps={[
+              "Create a Document",
+              "Add Recipients",
+              "Prepare Form",
+              "Preview Document",
+              "Send",
+            ]}
           />
         </div>
       </div>

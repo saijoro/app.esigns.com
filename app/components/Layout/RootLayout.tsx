@@ -46,7 +46,6 @@ export default RootLayout;
 
 function NavbarLayout() {
   const { counter } = useContext(AppContext) as iContext;
-  const location = useLocation();
   const [searchString, setSearchString] = useState<string>("");
   const { open: isSidebarOpen, setOpen: setIsSidebarOpen } = useSidebar();
   return (
@@ -54,9 +53,13 @@ function NavbarLayout() {
       <nav className="flex justify-between items-center p-4">
         <div className="flex justify-start items-center gap-5">
           <img
-            src={"/images/layout/nav-icon.svg"}
+            src={
+              isSidebarOpen
+                ? "/images/layout/close.svg"
+                : "/images/layout/nav-icon.svg"
+            }
             alt="logo"
-            className={`h-5 w-5 cursor-pointer hover:scale-[1.1] ease-in-out duration-300`}
+            className={`h-5 w-5 cursor-pointer hover:scale-[1.1] ease-in-out duration-300 ${isSidebarOpen ? "rotate-180" : ""}`}
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
           />
           <img
@@ -145,6 +148,8 @@ function NavbarLayout() {
 }
 
 function CustomSidebar({ isSidebarOpen }: { isSidebarOpen: boolean }) {
+  const location = useLocation();
+
   const isActive = (activeLink: string) => {
     return (
       location.pathname === activeLink || location.pathname.includes(activeLink)
@@ -159,8 +164,6 @@ function CustomSidebar({ isSidebarOpen }: { isSidebarOpen: boolean }) {
             isSidebarOpen ? "w-[200px]" : "w-[50px]"
           }`}
         >
-          {/* <SidebarHeader className="h-[52px]">
-          </SidebarHeader> */}
           <SidebarContent
             className={`py-2 ${isSidebarOpen ? "px-3 " : "px-0"}`}
           >

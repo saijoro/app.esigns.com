@@ -21,7 +21,7 @@ const CreateDocument = () => {
       <div className="flex gap-5 w-full">
         <div
           {...getRootProps()}
-          className={`py-20 w-1/2 border-2 border-dashed rounded-lg p-1 flex flex-col items-center justify-center text-center ${
+          className={`cursor-pointer py-20 w-1/2 border-2 border-dashed rounded-lg p-1 flex flex-col items-center justify-center text-center ${
             isDragActive ? "border-blue-500 bg-blue-50" : ""
           } ${"cursor-pointer"}`}
         >

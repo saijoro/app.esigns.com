@@ -1,7 +1,4 @@
 import * as React from "react";
-import * as SeparatorPrimitive from "@radix-ui/react-separator";
-
-import { cn } from "@/lib/utils";
 
 interface StepperProps {
   totalSteps: number;
@@ -31,11 +28,9 @@ const Stepper: React.FC<StepperProps> = ({
             >
               <div className="flex items-center">
                 <span
-                  className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium ${
-                    isActive || isCompleted
-                      ? "bg-orange-500 text-white"
-                      : "bg-orange-200 text-orange-500"
-                  }`}
+                  className={`flex items-center justify-center w-8 h-8 rounded-full text-sm font-medium text-white ${
+                    isActive ? "bg-orange-500" : "bg-red-200"
+                  } ${isCompleted ? "bg-green-700" : ""}`}
                   aria-current={isActive ? "step" : undefined}
                 >
                   {stepNumber}

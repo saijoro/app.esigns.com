@@ -4,17 +4,23 @@ import { Link, Outlet } from "@tanstack/react-router";
 const CreateDocLayout = () => {
   return (
     <div className="w-full">
-      <div className="bg-[#fff9ed]">
-        <div className="w-full max-w-3xl mx-auto h-12">
+      <div className="bg-[#fff9ed] flex items-center sticky top-0">
+        <div className="w-full mx-auto">
           <Stepper
-            totalSteps={3}
-            currentStep={2}
-            steps={["Create a Document", "Add Recipients", "Review Content"]}
+            totalSteps={5}
+            currentStep={1}
+            steps={[
+              "Create a Document",
+              "Add Recipients",
+              "Prepare Form",
+              "Preview Document",
+              "Send",
+            ]}
           />
         </div>
       </div>
-      <div className="w-full flex">
-        <aside className="flex flex-col pl-3 border-r border-gray-200 h-[calc(100vh-100px-64px)] mt-5 w-2/12">
+      <div className="w-full flex h-full">
+        <aside className="sticky top-[64px] flex flex-col pl-3 border-r border-gray-200 h-[calc(100vh-100px-64px)] mt-5 w-2/12">
           <div className="p-2 w-full">
             <h3 className="font-normal text-[14px]">Create Document</h3>
 
@@ -27,12 +33,14 @@ const CreateDocLayout = () => {
                   Quick Access
                 </p>
               </Link>
-              <p className="pl-3 flex gap-2 items-center font-light text-gray-600 rounded-lg h-[40px] hover:bg-gray-100 w-full">
-                <span>
-                  <img src="/images/dashboard/menu-icon.svg" />
-                </span>{" "}
-                My Templates
-              </p>
+              <Link to={"/templates"}>
+                <p className="pl-3 flex gap-2 items-center font-light text-gray-600 rounded-lg h-[40px] hover:bg-gray-100 w-full">
+                  <span>
+                    <img src="/images/dashboard/menu-icon.svg" />
+                  </span>{" "}
+                  My Templates
+                </p>
+              </Link>
               <p className="pl-3 flex gap-2 items-center font-light text-gray-600 rounded-lg h-[40px] hover:bg-gray-100 w-full">
                 <span>
                   <img src="/images/dashboard/menu-icon.svg" />
@@ -91,7 +99,7 @@ const CreateDocLayout = () => {
             </div>
           </div>
         </aside>
-        <div className="px-7 py-5 w-full">
+        <div className="px-7 py-5 w-full overflow-y-auto">
           <Outlet />
         </div>
       </div>

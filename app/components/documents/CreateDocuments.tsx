@@ -1,3 +1,4 @@
+import { Plus } from "lucide-react";
 import { useDropzone, FileRejection } from "react-dropzone";
 
 const CreateDocument = () => {
@@ -16,11 +17,11 @@ const CreateDocument = () => {
     disabled: false,
   });
   return (
-    <div className="w-full">
+    <div className="w-full overflow-y-auto">
       <div className="flex gap-5 w-full">
         <div
           {...getRootProps()}
-          className={`py-20 w-1/2 border-2 border-dashed rounded-lg p-1 flex flex-col items-center justify-center text-center ${
+          className={`cursor-pointer hover:bg-[#f5f5f6] ease-in-out duration-300 py-20 w-1/2 border-2 border-dashed rounded-lg p-1 flex flex-col items-center justify-center text-center ${
             isDragActive ? "border-blue-500 bg-blue-50" : ""
           } ${"cursor-pointer"}`}
         >
@@ -48,6 +49,52 @@ const CreateDocument = () => {
             Provide some details, and AI will create a <br /> template for you
             using an editor
           </label>
+        </div>
+      </div>
+
+      <div className="w-full pt-7">
+        <h2>
+          Create a document from a template, or start with a blank document
+        </h2>
+        <div className="flex flex-wrap gap-3 pt-2">
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center">
+              <Plus />
+            </div>
+            <p className="text-center">Blank Template</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 1</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 2</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 3</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 4</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 5</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 6</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 7</p>
+          </div>
+          <div>
+            <div className="w-[150px] h-[150px] bg-[#e9e9e9] flex justify-center items-center"></div>
+            <p className="text-center">Template 8</p>
+          </div>
         </div>
       </div>
     </div>

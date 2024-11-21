@@ -19,6 +19,7 @@ import { Route as AuthVerifyImport } from './routes/_auth/verify'
 import { Route as AuthSignupImport } from './routes/_auth/signup'
 import { Route as AuthSigninImport } from './routes/_auth/signin'
 import { Route as LayoutSubLayoutIndexImport } from './routes/_layout/_sub-layout/index'
+import { Route as LayoutSubLayoutCreateDocumentImport } from './routes/_layout/_sub-layout/create-document'
 
 // Create/Update Routes
 
@@ -66,6 +67,13 @@ const LayoutSubLayoutIndexRoute = LayoutSubLayoutIndexImport.update({
   path: '/',
   getParentRoute: () => LayoutSubLayoutRoute,
 } as any)
+
+const LayoutSubLayoutCreateDocumentRoute =
+  LayoutSubLayoutCreateDocumentImport.update({
+    id: '/create-document',
+    path: '/create-document',
+    getParentRoute: () => LayoutSubLayoutRoute,
+  } as any)
 
 // Populate the FileRoutesByPath interface
 
@@ -120,6 +128,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutDashboardImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/_sub-layout/create-document': {
+      id: '/_layout/_sub-layout/create-document'
+      path: '/create-document'
+      fullPath: '/create-document'
+      preLoaderRoute: typeof LayoutSubLayoutCreateDocumentImport
+      parentRoute: typeof LayoutSubLayoutImport
+    }
     '/_layout/_sub-layout/': {
       id: '/_layout/_sub-layout/'
       path: '/'
@@ -147,10 +162,12 @@ const AuthRouteChildren: AuthRouteChildren = {
 const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
 
 interface LayoutSubLayoutRouteChildren {
+  LayoutSubLayoutCreateDocumentRoute: typeof LayoutSubLayoutCreateDocumentRoute
   LayoutSubLayoutIndexRoute: typeof LayoutSubLayoutIndexRoute
 }
 
 const LayoutSubLayoutRouteChildren: LayoutSubLayoutRouteChildren = {
+  LayoutSubLayoutCreateDocumentRoute: LayoutSubLayoutCreateDocumentRoute,
   LayoutSubLayoutIndexRoute: LayoutSubLayoutIndexRoute,
 }
 
@@ -177,6 +194,7 @@ export interface FileRoutesByFullPath {
   '/signup': typeof AuthSignupRoute
   '/verify': typeof AuthVerifyRoute
   '/dashboard': typeof LayoutDashboardRoute
+  '/create-document': typeof LayoutSubLayoutCreateDocumentRoute
   '/': typeof LayoutSubLayoutIndexRoute
 }
 
@@ -186,6 +204,7 @@ export interface FileRoutesByTo {
   '/signup': typeof AuthSignupRoute
   '/verify': typeof AuthVerifyRoute
   '/dashboard': typeof LayoutDashboardRoute
+  '/create-document': typeof LayoutSubLayoutCreateDocumentRoute
   '/': typeof LayoutSubLayoutIndexRoute
 }
 
@@ -198,14 +217,29 @@ export interface FileRoutesById {
   '/_auth/verify': typeof AuthVerifyRoute
   '/_layout/_sub-layout': typeof LayoutSubLayoutRouteWithChildren
   '/_layout/dashboard': typeof LayoutDashboardRoute
+  '/_layout/_sub-layout/create-document': typeof LayoutSubLayoutCreateDocumentRoute
   '/_layout/_sub-layout/': typeof LayoutSubLayoutIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '' | '/signin' | '/signup' | '/verify' | '/dashboard' | '/'
+  fullPaths:
+    | ''
+    | '/signin'
+    | '/signup'
+    | '/verify'
+    | '/dashboard'
+    | '/create-document'
+    | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '' | '/signin' | '/signup' | '/verify' | '/dashboard' | '/'
+  to:
+    | ''
+    | '/signin'
+    | '/signup'
+    | '/verify'
+    | '/dashboard'
+    | '/create-document'
+    | '/'
   id:
     | '__root__'
     | '/_auth'
@@ -215,6 +249,7 @@ export interface FileRouteTypes {
     | '/_auth/verify'
     | '/_layout/_sub-layout'
     | '/_layout/dashboard'
+    | '/_layout/_sub-layout/create-document'
     | '/_layout/_sub-layout/'
   fileRoutesById: FileRoutesById
 }
@@ -274,12 +309,17 @@ export const routeTree = rootRoute
       "filePath": "_layout/_sub-layout.tsx",
       "parent": "/_layout",
       "children": [
+        "/_layout/_sub-layout/create-document",
         "/_layout/_sub-layout/"
       ]
     },
     "/_layout/dashboard": {
       "filePath": "_layout/dashboard.tsx",
       "parent": "/_layout"
+    },
+    "/_layout/_sub-layout/create-document": {
+      "filePath": "_layout/_sub-layout/create-document.tsx",
+      "parent": "/_layout/_sub-layout"
     },
     "/_layout/_sub-layout/": {
       "filePath": "_layout/_sub-layout/index.tsx",

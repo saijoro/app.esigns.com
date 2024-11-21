@@ -1,4 +1,4 @@
-import { UploadCloud } from "lucide-react";
+"use client";
 import { useDropzone, FileRejection } from "react-dropzone";
 
 const CreateDocument = () => {

@@ -5,7 +5,7 @@ import { useRouter } from "@tanstack/react-router";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { signUpAPI } from "~/utils/services/auth";
-import { ISignUpPayload } from "~/lib/interfaces/auth/iSignIn";
+import { ISignUpPayload } from "~/lib/interfaces/auth/iAuth";
 
 const SignUp = () => {
   const router = useRouter();

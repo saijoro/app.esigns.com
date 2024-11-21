@@ -3,22 +3,16 @@ import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import { Controller } from "react-hook-form";
 import LoadingComponent from "~/components/core/LoadingComponent";
+import { PersonalInfoProps } from "~/lib/interfaces/auth/iAuth";
 import { checkEmailAPI } from "~/utils/services/auth";
 
-const PersonalInfo = ({
+const PersonalInfo: React.FC<PersonalInfoProps> = ({
   control,
   errors,
   step,
   handleNext,
   setValue,
   getValues,
-}: {
-  control: any;
-  errors: any;
-  step: number;
-  handleNext: () => void;
-  setValue: any;
-  getValues: any;
 }) => {
   const [loading, setLoading] = useState<boolean>(false);
 

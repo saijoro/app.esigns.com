@@ -13,6 +13,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as LayoutImport } from './routes/_layout'
 import { Route as AuthImport } from './routes/_auth'
+import { Route as LayoutDashboardImport } from './routes/_layout/dashboard'
 import { Route as LayoutSubLayoutImport } from './routes/_layout/_sub-layout'
 import { Route as AuthVerifyImport } from './routes/_auth/verify'
 import { Route as AuthSignupImport } from './routes/_auth/signup'
@@ -29,6 +30,12 @@ const LayoutRoute = LayoutImport.update({
 const AuthRoute = AuthImport.update({
   id: '/_auth',
   getParentRoute: () => rootRoute,
+} as any)
+
+const LayoutDashboardRoute = LayoutDashboardImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => LayoutRoute,
 } as any)
 
 const LayoutSubLayoutRoute = LayoutSubLayoutImport.update({
@@ -106,6 +113,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutSubLayoutImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/dashboard': {
+      id: '/_layout/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof LayoutDashboardImport
+      parentRoute: typeof LayoutImport
+    }
     '/_layout/_sub-layout/': {
       id: '/_layout/_sub-layout/'
       path: '/'
@@ -146,10 +160,12 @@ const LayoutSubLayoutRouteWithChildren = LayoutSubLayoutRoute._addFileChildren(
 
 interface LayoutRouteChildren {
   LayoutSubLayoutRoute: typeof LayoutSubLayoutRouteWithChildren
+  LayoutDashboardRoute: typeof LayoutDashboardRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutSubLayoutRoute: LayoutSubLayoutRouteWithChildren,
+  LayoutDashboardRoute: LayoutDashboardRoute,
 }
 
 const LayoutRouteWithChildren =
@@ -160,6 +176,7 @@ export interface FileRoutesByFullPath {
   '/signin': typeof AuthSigninRoute
   '/signup': typeof AuthSignupRoute
   '/verify': typeof AuthVerifyRoute
+  '/dashboard': typeof LayoutDashboardRoute
   '/': typeof LayoutSubLayoutIndexRoute
 }
 
@@ -168,6 +185,7 @@ export interface FileRoutesByTo {
   '/signin': typeof AuthSigninRoute
   '/signup': typeof AuthSignupRoute
   '/verify': typeof AuthVerifyRoute
+  '/dashboard': typeof LayoutDashboardRoute
   '/': typeof LayoutSubLayoutIndexRoute
 }
 
@@ -179,14 +197,15 @@ export interface FileRoutesById {
   '/_auth/signup': typeof AuthSignupRoute
   '/_auth/verify': typeof AuthVerifyRoute
   '/_layout/_sub-layout': typeof LayoutSubLayoutRouteWithChildren
+  '/_layout/dashboard': typeof LayoutDashboardRoute
   '/_layout/_sub-layout/': typeof LayoutSubLayoutIndexRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '' | '/signin' | '/signup' | '/verify' | '/'
+  fullPaths: '' | '/signin' | '/signup' | '/verify' | '/dashboard' | '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '' | '/signin' | '/signup' | '/verify' | '/'
+  to: '' | '/signin' | '/signup' | '/verify' | '/dashboard' | '/'
   id:
     | '__root__'
     | '/_auth'
@@ -195,6 +214,7 @@ export interface FileRouteTypes {
     | '/_auth/signup'
     | '/_auth/verify'
     | '/_layout/_sub-layout'
+    | '/_layout/dashboard'
     | '/_layout/_sub-layout/'
   fileRoutesById: FileRoutesById
 }
@@ -234,7 +254,8 @@ export const routeTree = rootRoute
     "/_layout": {
       "filePath": "_layout.tsx",
       "children": [
-        "/_layout/_sub-layout"
+        "/_layout/_sub-layout",
+        "/_layout/dashboard"
       ]
     },
     "/_auth/signin": {
@@ -255,6 +276,10 @@ export const routeTree = rootRoute
       "children": [
         "/_layout/_sub-layout/"
       ]
+    },
+    "/_layout/dashboard": {
+      "filePath": "_layout/dashboard.tsx",
+      "parent": "/_layout"
     },
     "/_layout/_sub-layout/": {
       "filePath": "_layout/_sub-layout/index.tsx",

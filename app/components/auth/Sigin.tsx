@@ -7,7 +7,7 @@ import { loginAPI } from "~/utils/services/auth";
 import { useForm, Controller } from "react-hook-form";
 import { Eye, EyeOff, Loader2, LockKeyhole, Mail } from "lucide-react";
 import { useState } from "react";
-import { ILoginDetails } from "~/lib/interfaces/auth/iSignIn";
+import { ILoginDetails } from "~/lib/interfaces/auth/iAuth";
 
 const SignIn: React.FC = () => {
   const navigate = useNavigate({ from: "/" });

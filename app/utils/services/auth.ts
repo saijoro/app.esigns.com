@@ -1,4 +1,4 @@
-import { ISignUpPayload } from "~/lib/interfaces/auth/iSignIn";
+import { ISignUpPayload } from "~/lib/interfaces/auth/iAuth";
 import { $fetch } from "../fetch";
 
 export const loginAPI = async (payload: {

@@ -26,6 +26,7 @@ const RootLayout = () => {
   const { counter } = useContext(AppContext) as iContext;
   const location = useLocation();
   const [searchString, setSearchString] = useState<string>("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const isActive = (activeLink: string) => {
     if (activeLink === "/") {
@@ -33,12 +34,30 @@ const RootLayout = () => {
     }
     return location.pathname.includes(activeLink);
   };
+
+  const onSideMenuBtnClick = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
+
   return (
     <div className="h-screen w-full bg-[linear-gradient(45deg,_#562405,_#ee7206,_#562405)]">
       <nav className="flex justify-between items-center p-4">
         <div className="flex justify-start items-center gap-5">
-          <img src="/images/layout/nav-icon.svg" alt="logo" className="" />
-          <img src="/images/layout/main-logo.svg" alt="logo" className="" />
+          <img
+            src={
+              isSidebarOpen
+                ? "/images/layout/close.svg"
+                : "/images/layout/nav-icon.svg"
+            }
+            alt="logo"
+            className="h-5 w-5 cursor-pointer hover:scale-[1.2] ease-in-out duration-300"
+            onClick={onSideMenuBtnClick}
+          />
+          <img
+            src="/images/layout/main-logo.svg"
+            alt="logo"
+            className="hover:animate-pulse cursor-pointer"
+          />
         </div>
         <div className="flex gap-2 justify-end items-center">
           <div className="relative">
@@ -46,7 +65,7 @@ const RootLayout = () => {
               value={searchString}
               type="text"
               onChange={(e) => setSearchString(e.target.value)}
-              className="h-10 px-4 py-3.5 bg-transparent rounded-lg border border-black/30 focus:outline-none text-white focus-visible:outline-none"
+              className="h-10 px-4 py-3.5 bg-[#ffffff60] rounded-lg border border-black/30 focus:outline-none text-white focus-visible:outline-none"
             />
             {searchString ? (
               <button
@@ -61,7 +80,7 @@ const RootLayout = () => {
           </div>
           <div className="relative">
             <Select>
-              <SelectTrigger className="h-10 px-4 py-3.5 bg-transparent rounded-lg border border-black/30 text-white focus:outline-none focus-visible:outline-none">
+              <SelectTrigger className="h-10 px-4 py-3.5 bg-[#ffffff60] rounded-lg border border-black/30 text-white focus:outline-none focus-visible:outline-none">
                 <SelectValue placeholder="Theme" />
               </SelectTrigger>
               <SelectContent>
@@ -87,14 +106,14 @@ const RootLayout = () => {
             </Select>
           </div>
 
-          <div className="text-white rounded-full bg-transparent px-2 py-2">
+          <div className="text-white rounded-full bg-[#ffffff60] px-2 py-2">
             <MessageCircleMore />
           </div>
-          <div className="text-white rounded-full bg-transparent px-2 py-2">
+          <div className="text-white rounded-full bg-[#ffffff60] px-2 py-2">
             <Bell />
           </div>
           <div className="relative">
-            <div className="w-[200px] text-white flex justify-between items-center rounded-full bg-transparent pr-2">
+            <div className="w-[200px] text-white flex justify-between items-center rounded-full bg-[#ffffff60] pr-2">
               <div className="flex items-center gap-2">
                 <Avatar>
                   <AvatarImage
@@ -121,49 +140,57 @@ const RootLayout = () => {
             <li className="px-2 py-4">
               <div
                 className={
-                  isActive("/")
-                    ? `text-black bg-white p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
-                    : `text-white bg-transparent p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
+                  (isActive("/")
+                    ? `text-black bg-white p-2 flex items-center justify-start rounded-md gap-2`
+                    : `text-white bg-transparent p-2 flex items-center justify-start rounded-md gap-2`) +
+                  " group cursor-pointer"
                 }
               >
-                <House className="w-[20px] h-[20px]" />
+                <House className="w-[20px] h-[20px] cursor-pointer group-hover:scale-[1.2] ease-in-out duration-300" />
+                {isSidebarOpen ? "Dashboard" : ""}
               </div>
             </li>
             <li className="px-2 py-4">
               <div
                 className={
-                  isActive("/test")
-                    ? `text-black bg-white p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
-                    : `text-white bg-transparent p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
+                  (isActive("/test")
+                    ? `text-black bg-white p-2 flex items-center justify-start rounded-md gap-2`
+                    : `text-white bg-transparent p-2 flex items-center justify-start rounded-md gap-2`) +
+                  " group cursor-pointer"
                 }
               >
-                <File className="w-[20px] h-[20px]" />
+                <File className="w-[20px] h-[20px] cursor-pointer group-hover:scale-[1.2] ease-in-out duration-300" />
+                {isSidebarOpen ? "Documents" : ""}
               </div>
             </li>
             <li className="px-2 py-4">
               <div
                 className={
-                  isActive("/test")
-                    ? `text-black bg-white p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
-                    : `text-white bg-transparent p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
+                  (isActive("/test")
+                    ? `text-black bg-white p-2 flex items-center justify-start rounded-md gap-2`
+                    : `text-white bg-transparent p-2 flex items-center justify-start rounded-md gap-2`) +
+                  " group cursor-pointer"
                 }
               >
-                <ContactRound className="w-[20px] h-[20px]" />
+                <ContactRound className="w-[20px] h-[20px] cursor-pointer group-hover:scale-[1.2] ease-in-out duration-300" />
+                {isSidebarOpen ? "Contacts" : ""}
               </div>
             </li>
             <li className="px-2 py-4">
               <div
                 className={
-                  isActive("/test")
-                    ? `text-black bg-white p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
-                    : `text-white bg-transparent p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
+                  (isActive("/test")
+                    ? `text-black bg-white p-2 flex items-center justify-start rounded-md gap-2`
+                    : `text-white bg-transparent p-2 flex items-center justify-start rounded-md gap-2`) +
+                  " group cursor-pointer"
                 }
               >
                 {/* <img
                   src="/images/layout/workflow.svg"
-                  className="w-[20px] h-[20px]"
+                  className="w-[20px] h-[20px] cursor-pointer group-hover:scale-[1.2] ease-in-out duration-300"
                 /> */}
                 <svg
+                  className="cursor-pointer group-hover:scale-[1.2] ease-in-out duration-300"
                   width="21"
                   height="18"
                   viewBox="0 0 21 18"
@@ -175,21 +202,24 @@ const RootLayout = () => {
                     fill={isActive("/test") ? "#000" : "#fff"}
                   />
                 </svg>
+                {isSidebarOpen ? "Work flows" : ""}
               </div>
             </li>
             <li className="px-2 py-4">
               <div
                 className={
-                  isActive("/test")
-                    ? `text-black bg-white p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
-                    : `text-white bg-transparent p-2 w-[40px] h-[40px] flex items-center justify-center rounded-md`
+                  (isActive("/test")
+                    ? `text-black bg-white p-2 flex items-center justify-start rounded-md gap-2`
+                    : `text-white bg-transparent p-2 flex items-center justify-start rounded-md gap-2`) +
+                  " group cursor-pointer"
                 }
               >
                 {/* <img
                   src="/images/layout/groups.svg"
-                  className="w-[20px] h-[20px]"
+                  className="w-[20px] h-[20px] cursor-pointer group-hover:scale-[1.2] ease-in-out duration-300"
                 /> */}
                 <svg
+                  className="cursor-pointer group-hover:scale-[1.2] ease-in-out duration-300"
                   width="20"
                   height="20"
                   viewBox="0 0 20 20"
@@ -201,11 +231,14 @@ const RootLayout = () => {
                     fill={isActive("/test") ? "#000" : "#fff"}
                   />
                 </svg>
+                {isSidebarOpen ? "Groups" : ""}
               </div>
             </li>
           </ul>
         </aside>
-        <div className="bg-white w-[calc(100%-100px)] rounded-lg overflow-hidden">
+        <div
+          className={`bg-white ${isSidebarOpen ? "w-[calc(100%-190px)]" : "w-[calc(100%-100px)]"} rounded-lg overflow-hidden`}
+        >
           <Outlet />
         </div>
       </div>

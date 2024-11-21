@@ -1,11 +1,11 @@
 import * as React from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import Dashboard from "~/components/dashboard";
+import SignUp from "~/components/auth/SignUp";
 
-export const Route = createFileRoute("/_layout/_sub-layout/")({
+export const Route = createFileRoute("/_auth/signup")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  return "<Outlet />";
+  return <SignUp />;
 }

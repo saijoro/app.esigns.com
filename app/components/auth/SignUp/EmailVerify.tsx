@@ -52,6 +52,7 @@ const EmailVerfication = () => {
                     name="email"
                     control={control}
                     disabled
+                    defaultValue={email}
                     render={({ field }) => (
                       <div className="w-full">
                         <Input

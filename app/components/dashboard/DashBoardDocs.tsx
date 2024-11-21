@@ -128,22 +128,28 @@ const DashBoardDocs = () => {
     badge: "bg-[#e0e0e0] text-[#828282]",
   };
 
-  // const { isLoading, isError, data, error, isFetching } = useQuery({
-  //   queryKey: ["docs"],
+  const {
+    isLoading,
+    isError,
+    data: response,
+    error,
+    isFetching,
+  } = useQuery({
+    queryKey: ["docs"],
 
-  //   queryFn: async () => {
-  //     const response = await getDocumentsAPI({
-  //       page: 1,
-  //       limit: 10,
-  //     });
-  //     if (response?.status === 200 || response?.status === 201) {
-  //       let { data, pagination } = response?.data;
-  //       console.log(data, "data");
-  //       console.log(pagination, "pagination");
-  //       // return { data, pagination };
-  //     }
-  //   },
-  // });
+    queryFn: async () => {
+      const response = await getDocumentsAPI({
+        page: 1,
+        limit: 10,
+      });
+      if (response?.status === 200 || response?.status === 201) {
+        let { data, pagination } = response?.data;
+        console.log(data, "data");
+        console.log(pagination, "pagination");
+        // return { data, pagination };
+      }
+    },
+  });
   return (
     <div className="w-full px-4">
       <div className="w-full pt-[9px]  bg-white rounded-xl shadow flex-col justify-start items-start inline-flex">

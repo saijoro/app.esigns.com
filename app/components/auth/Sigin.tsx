@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { ILoginDetails } from "~/lib/interfaces/auth/iAuth";
+import { authStore, updateAuthStore } from "~/store/auth";
 import { loginAPI } from "~/utils/services/auth";
 
 const SignIn: React.FC = () => {
@@ -33,7 +34,6 @@ const SignIn: React.FC = () => {
           console.log(response, "response");
 
           const expiryDate = new Date(response?.data?.access_token_expires_at);
-          // dispatch(setUserDetails(data));
           Cookies.set("token", response?.data.access_token, {
             priority: "High",
           });
@@ -81,6 +81,12 @@ const SignIn: React.FC = () => {
   });
 
   const onSubmit = (data: any) => {
+    // const token = "tokn";
+    // const user = { name: "John Doe", email: "john.doe@example.com" };
+
+    // updateAuthStore({ token, user });
+    // console.log(authStore.state);
+
     mutate(data);
   };
 

@@ -29,6 +29,8 @@ const SignIn: React.FC = () => {
       try {
         setLoading(true);
         const response = await loginAPI(loginDetails);
+        console.log(response, "response");
+
         if (response?.status === 200 || response?.status === 201) {
           toast.success(response?.data?.message);
           console.log(response, "response");
@@ -142,32 +144,34 @@ const SignIn: React.FC = () => {
                     Password
                   </div>
                   <div className="self-stretch h-[81px] flex-col justify-start items-start gap-3 flex">
-                    <Controller
-                      name="password"
-                      control={control}
-                      render={({ field }) => (
-                        <div className="w-full relative">
-                          <Input
-                            {...field}
-                            type={passwordVisible ? "text" : "password"}
-                            placeholder="Enter password"
-                            className="h-12 px-4 py-3.5 bg-white rounded-lg border border-black/30 w-full"
-                          />
-                          <button
-                            type="button"
-                            onClick={togglePasswordVisibility}
-                            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-800"
-                          >
-                            {passwordVisible ? <Eye /> : <EyeOff />}
-                          </button>
-                          {errors.password && (
-                            <div className="text-red-500 text-sm mt-1 capitalize">
-                              {errors?.password?.message as string}
-                            </div>
-                          )}
+                    <div className="w-full">
+                      <Controller
+                        name="password"
+                        control={control}
+                        render={({ field }) => (
+                          <div className="w-full relative">
+                            <Input
+                              {...field}
+                              type={passwordVisible ? "text" : "password"}
+                              placeholder="Enter password"
+                              className="h-12 px-4 py-3.5 bg-white rounded-lg border border-black/30 w-full"
+                            />
+                            <button
+                              type="button"
+                              onClick={togglePasswordVisibility}
+                              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-800"
+                            >
+                              {passwordVisible ? <Eye /> : <EyeOff />}
+                            </button>
+                          </div>
+                        )}
+                      />
+                      {errors.password && (
+                        <div className="text-red-500 text-sm mt-1 capitalize">
+                          {errors?.password?.message as string}
                         </div>
                       )}
-                    />
+                    </div>
 
                     <div className="self-stretch text-right text-black text-base font-medium leading-tight">
                       Forgot Password ?

@@ -5,5 +5,5 @@ export const Route = createFileRoute("/_layout/_sub-layout/")({
 });
 
 function RouteComponent() {
-  return <Outlet />;
+  return "Dashboard";
 }

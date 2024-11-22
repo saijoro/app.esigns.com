@@ -11,17 +11,41 @@ const DocsColumns = () => {
       cell: (info: any) => <span>{info.getValue()}</span>,
     },
     {
-      accessorFn: (row: any) => row.NAME,
-      id: "NAME",
+      accessorFn: (row: any) => row.title,
+      id: "title",
       cell: (info: any) => {
         return <span>{info.getValue()}</span>;
       },
       width: "200px",
       maxWidth: "200px",
       minWidth: "200px",
-      header: () => <span>Doc Name</span>,
+      header: () => <span>Name</span>,
       footer: (props: any) => props.column.id,
     },
+    {
+      accessorFn: (row: any) => row.document_data?.["SENDER@primary_fields_5"],
+      id: "SENDER@primary_fields_5",
+      cell: (info: any) => {
+        return <span>{info.getValue()}</span>;
+      },
+      width: "200px",
+      maxWidth: "200px",
+      minWidth: "200px",
+      header: () => <span>From</span>,
+      footer: (props: any) => props.column.id,
+    },
+    // {
+    //   accessorFn: (row: any) => row.company_document_data?.["title"],
+    //   id: "title",
+    //   cell: (info: any) => {
+    //     return <span>{info.getValue()}</span>;
+    //   },
+    //   width: "200px",
+    //   maxWidth: "200px",
+    //   minWidth: "200px",
+    //   header: () => <span>Company</span>,
+    //   footer: (props: any) => props.column.id,
+    // },
     {
       accessorFn: (row: any) => row.status,
       id: "status",
@@ -35,8 +59,8 @@ const DocsColumns = () => {
       footer: (props: any) => props.column.id,
     },
     {
-      accessorFn: (row: any) => row.lastmodified,
-      id: "lastmodified",
+      accessorFn: (row: any) => row.updated_at,
+      id: "updated_at",
       cell: (info: any) => {
         return <span>{info.getValue()}</span>;
       },
@@ -59,8 +83,8 @@ const DocsColumns = () => {
       footer: (props: any) => props.column.id,
     },
     {
-      accessorFn: (row: any) => row.EXPIRES,
-      id: "EXPIRES",
+      accessorFn: (row: any) => row.expires_at,
+      id: "expires_at",
       cell: (info: any) => {
         return <span>{info.getValue()}</span>;
       },

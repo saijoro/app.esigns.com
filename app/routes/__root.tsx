@@ -5,7 +5,7 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
-import appCss from "./styles/app.css?url";
+import appCss from "../globals.css?url";
 import { CreateAppContext } from "~/context/appContext";
 import { Toaster } from "sonner";
 import { Providers } from "~/redux/Provider";

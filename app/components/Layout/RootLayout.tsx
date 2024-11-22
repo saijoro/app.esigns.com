@@ -1,4 +1,10 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -19,7 +25,9 @@ import {
   SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Outlet, useLocation } from "@tanstack/react-router";
+
+import { Outlet, useLocation, useNavigate } from "@tanstack/react-router";
+import Cookies from "js-cookie";
 import {
   Bell,
   CircleChevronDown,
@@ -45,9 +53,17 @@ const RootLayout = () => {
 export default RootLayout;
 
 function NavbarLayout() {
+  const navigate = useNavigate({ from: "/" });
   const { counter } = useContext(AppContext) as iContext;
   const [searchString, setSearchString] = useState<string>("");
   const { open: isSidebarOpen, setOpen: setIsSidebarOpen } = useSidebar();
+  const handleLogout = () => {
+    Cookies.remove("token");
+    Cookies.remove("user_type");
+    navigate({
+      to: `/signin`,
+    });
+  };
   return (
     <div className="h-screen w-full bg-[linear-gradient(45deg,_#562405,_#ee7206,_#562405)]">
       <nav className="flex justify-between items-center p-4">
@@ -121,25 +137,37 @@ function NavbarLayout() {
           <div className="text-white rounded-full bg-[#ffffff60] px-2 py-2">
             <Bell />
           </div>
-          <div className="relative">
-            <div className="w-[200px] text-white flex justify-between items-center rounded-full bg-[#ffffff60] pr-2">
-              <div className="flex items-center gap-2">
-                <Avatar>
-                  <AvatarImage
-                    src="https://github.com/shadcn.png"
-                    alt="@shadcn"
-                    className="rounded-full"
-                  />
-                  <AvatarFallback>CN</AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="text-white text-[14px]">John Doe</p>
-                  <p className="text-sm text-white text-[12px]">Admin</p>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex gap-2 items-center hover:cursor-pointer">
+              <div className="relative">
+                <div className="w-[200px] text-white flex justify-between items-center rounded-full bg-[#ffffff60] pr-2">
+                  <div className="flex items-center gap-2">
+                    <Avatar>
+                      <AvatarImage
+                        src="https://github.com/shadcn.png"
+                        alt="@shadcn"
+                        className="rounded-full"
+                      />
+                      <AvatarFallback>CN</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="text-white text-[14px]">John Doe</p>
+                      <p className="text-sm text-white text-[12px]">Admin</p>
+                    </div>
+                  </div>
+                  <CircleChevronDown />
                 </div>
               </div>
-              <CircleChevronDown />
-            </div>
-          </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-white">
+              <DropdownMenuItem
+                className="cursor-pointer"
+                onClick={handleLogout}
+              >
+                Logout
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </nav>
       <CustomSidebar isSidebarOpen={isSidebarOpen} />

@@ -7,7 +7,7 @@ interface IAPIResponse {
   data: any;
 }
 class FetchService {
-  authStatusCodes: number[] = [401];
+  authStatusCodes: number[] = [];
   authErrorURLs: string[] = [
     "/auth/login",
     "/auth/reset-password",
@@ -20,7 +20,7 @@ class FetchService {
   }
 
   configureAuthorization(config: any) {
-    let accessToken = "Bearer ";
+    let accessToken = "";
     accessToken += Cookies.get("token");
     config.headers["Authorization"] = accessToken;
   }

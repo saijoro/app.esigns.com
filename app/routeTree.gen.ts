@@ -21,6 +21,7 @@ import { Route as AuthSigninImport } from './routes/_auth/signin'
 import { Route as LayoutSubLayoutIndexImport } from './routes/_layout/_sub-layout/index'
 import { Route as LayoutSubLayoutTemplatesImport } from './routes/_layout/_sub-layout/templates'
 import { Route as LayoutSubLayoutCreateDocumentImport } from './routes/_layout/_sub-layout/create-document'
+import { Route as LayoutSubLayoutAddRecipientsImport } from './routes/_layout/_sub-layout/add-recipients'
 
 // Create/Update Routes
 
@@ -82,6 +83,13 @@ const LayoutSubLayoutCreateDocumentRoute =
     getParentRoute: () => LayoutSubLayoutRoute,
   } as any)
 
+const LayoutSubLayoutAddRecipientsRoute =
+  LayoutSubLayoutAddRecipientsImport.update({
+    id: '/add-recipients',
+    path: '/add-recipients',
+    getParentRoute: () => LayoutSubLayoutRoute,
+  } as any)
+
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -135,6 +143,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutDashboardImport
       parentRoute: typeof LayoutImport
     }
+    '/_layout/_sub-layout/add-recipients': {
+      id: '/_layout/_sub-layout/add-recipients'
+      path: '/add-recipients'
+      fullPath: '/add-recipients'
+      preLoaderRoute: typeof LayoutSubLayoutAddRecipientsImport
+      parentRoute: typeof LayoutSubLayoutImport
+    }
     '/_layout/_sub-layout/create-document': {
       id: '/_layout/_sub-layout/create-document'
       path: '/create-document'
@@ -176,12 +191,14 @@ const AuthRouteChildren: AuthRouteChildren = {
 const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
 
 interface LayoutSubLayoutRouteChildren {
+  LayoutSubLayoutAddRecipientsRoute: typeof LayoutSubLayoutAddRecipientsRoute
   LayoutSubLayoutCreateDocumentRoute: typeof LayoutSubLayoutCreateDocumentRoute
   LayoutSubLayoutTemplatesRoute: typeof LayoutSubLayoutTemplatesRoute
   LayoutSubLayoutIndexRoute: typeof LayoutSubLayoutIndexRoute
 }
 
 const LayoutSubLayoutRouteChildren: LayoutSubLayoutRouteChildren = {
+  LayoutSubLayoutAddRecipientsRoute: LayoutSubLayoutAddRecipientsRoute,
   LayoutSubLayoutCreateDocumentRoute: LayoutSubLayoutCreateDocumentRoute,
   LayoutSubLayoutTemplatesRoute: LayoutSubLayoutTemplatesRoute,
   LayoutSubLayoutIndexRoute: LayoutSubLayoutIndexRoute,
@@ -210,6 +227,7 @@ export interface FileRoutesByFullPath {
   '/signup': typeof AuthSignupRoute
   '/verify': typeof AuthVerifyRoute
   '/dashboard': typeof LayoutDashboardRoute
+  '/add-recipients': typeof LayoutSubLayoutAddRecipientsRoute
   '/create-document': typeof LayoutSubLayoutCreateDocumentRoute
   '/templates': typeof LayoutSubLayoutTemplatesRoute
   '/': typeof LayoutSubLayoutIndexRoute
@@ -221,6 +239,7 @@ export interface FileRoutesByTo {
   '/signup': typeof AuthSignupRoute
   '/verify': typeof AuthVerifyRoute
   '/dashboard': typeof LayoutDashboardRoute
+  '/add-recipients': typeof LayoutSubLayoutAddRecipientsRoute
   '/create-document': typeof LayoutSubLayoutCreateDocumentRoute
   '/templates': typeof LayoutSubLayoutTemplatesRoute
   '/': typeof LayoutSubLayoutIndexRoute
@@ -235,6 +254,7 @@ export interface FileRoutesById {
   '/_auth/verify': typeof AuthVerifyRoute
   '/_layout/_sub-layout': typeof LayoutSubLayoutRouteWithChildren
   '/_layout/dashboard': typeof LayoutDashboardRoute
+  '/_layout/_sub-layout/add-recipients': typeof LayoutSubLayoutAddRecipientsRoute
   '/_layout/_sub-layout/create-document': typeof LayoutSubLayoutCreateDocumentRoute
   '/_layout/_sub-layout/templates': typeof LayoutSubLayoutTemplatesRoute
   '/_layout/_sub-layout/': typeof LayoutSubLayoutIndexRoute
@@ -248,6 +268,7 @@ export interface FileRouteTypes {
     | '/signup'
     | '/verify'
     | '/dashboard'
+    | '/add-recipients'
     | '/create-document'
     | '/templates'
     | '/'
@@ -258,6 +279,7 @@ export interface FileRouteTypes {
     | '/signup'
     | '/verify'
     | '/dashboard'
+    | '/add-recipients'
     | '/create-document'
     | '/templates'
     | '/'
@@ -270,6 +292,7 @@ export interface FileRouteTypes {
     | '/_auth/verify'
     | '/_layout/_sub-layout'
     | '/_layout/dashboard'
+    | '/_layout/_sub-layout/add-recipients'
     | '/_layout/_sub-layout/create-document'
     | '/_layout/_sub-layout/templates'
     | '/_layout/_sub-layout/'
@@ -331,6 +354,7 @@ export const routeTree = rootRoute
       "filePath": "_layout/_sub-layout.tsx",
       "parent": "/_layout",
       "children": [
+        "/_layout/_sub-layout/add-recipients",
         "/_layout/_sub-layout/create-document",
         "/_layout/_sub-layout/templates",
         "/_layout/_sub-layout/"
@@ -339,6 +363,10 @@ export const routeTree = rootRoute
     "/_layout/dashboard": {
       "filePath": "_layout/dashboard.tsx",
       "parent": "/_layout"
+    },
+    "/_layout/_sub-layout/add-recipients": {
+      "filePath": "_layout/_sub-layout/add-recipients.tsx",
+      "parent": "/_layout/_sub-layout"
     },
     "/_layout/_sub-layout/create-document": {
       "filePath": "_layout/_sub-layout/create-document.tsx",
